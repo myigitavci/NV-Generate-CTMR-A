@@ -1,12 +1,28 @@
 """
 create_midi_datalist.py
 ========================
-Creates a MAISI-compatible dataset JSON from the MIDI metadata CSV.
+Creates a MAISI-compatible dataset JSON from a metadata CSV.
 This JSON is needed both for:
   1. VAE encoding step (dataset_raw.json)
   2. MR-CLIP fine-tuning (dataset_mrclip.json, storing pkl idx + emb paths)
 
-Usage:
+Supported CSV formats
+---------------------
+* MIDI format  : columns include ``filepath``, ``sequence`` (e.g. T1W, T2W, FLAIR)
+* MR-RATE/batch00 format : columns are ``filepath``, ``text``, ``label``
+  Sequence is inferred from the filename or from the free-text ``text`` field.
+
+DGX usage (batch00 CSV, absolute NFS paths):
+  python -m scripts.create_midi_datalist \\
+      --csv data/batch00_metadata_processed_ready.csv \\
+      --embeddings-pkl data/mrclip_embeddings.pkl \\
+      --data-base-dir /nfs/home/mavci/MR/MR-RATE/mri \\
+      --embedding-base-dir ./embeddings \\
+      --out-raw-json dataset_raw.json \\
+      --out-mrclip-json dataset_mrclip.json \\
+      --val-fraction 0.05
+
+Original MIDI usage:
   python -m scripts.create_midi_datalist \\
       --csv /data/distclip_training/mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv \\
       --embeddings-pkl data/mrclip_embeddings.pkl \\
@@ -46,6 +62,65 @@ def sequence_to_modality(seq: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Sequence inference for CSVs without an explicit ``sequence`` column
+# ---------------------------------------------------------------------------
+
+# Patterns matched against the filename stem (case-insensitive)
+_FNAME_PATTERNS = [
+    ("flair",   "FLAIR"),
+    ("t2w",     "T2W"),
+    ("t2star",  "T2STARW"),
+    ("t1w",     "T1W"),
+    ("pdw",     "PDW"),
+    ("swi",     "T2STARW"),   # SWI ≈ T2* weighting
+    ("t2",      "T2W"),       # generic t2 fallback (after t2star/t2w)
+    ("t1",      "T1W"),
+]
+
+# Keywords found inside the free-text ``text`` field
+_TEXT_PATTERNS = [
+    ("flair",  "FLAIR"),
+    ("t2star", "T2STARW"),
+    ("t2w",    "T2W"),
+    ("t1w",    "T1W"),
+    ("pdw",    "PDW"),
+    ("swi",    "T2STARW"),
+    ("t2",     "T2W"),
+    ("t1",     "T1W"),
+]
+
+
+def infer_sequence_from_row(row: "pd.Series") -> str:
+    """Return a SEQUENCE_TO_MODALITY-compatible sequence string for *row*.
+
+    Priority:
+      1. Explicit ``sequence`` column (MIDI-format CSV).
+      2. Filename stem pattern matching (MR-RATE/batch00 format).
+      3. Free-text ``text`` field keyword scan.
+      4. Falls back to empty string → 'mri' modality.
+    """
+    # 1. Explicit column
+    if "sequence" in row.index and pd.notna(row.get("sequence", None)):
+        return str(row["sequence"])
+
+    fp = str(row.get("filepath", "")).lower()
+    fname = os.path.basename(fp)
+
+    # 2. Filename matching
+    for pat, seq in _FNAME_PATTERNS:
+        if pat in fname:
+            return seq
+
+    # 3. Text field scan
+    text = str(row.get("text", "")).lower()
+    for pat, seq in _TEXT_PATTERNS:
+        if pat in text:
+            return seq
+
+    return ""
+
+
+# ---------------------------------------------------------------------------
 # Filepath resolution
 # ---------------------------------------------------------------------------
 
@@ -77,8 +152,9 @@ def to_relative(abs_path: str, data_base_dir: str) -> str:
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--csv", required=True)
-    p.add_argument("--embeddings-pkl", required=True,
-                   help="mrclip_embeddings.pkl (matches CSV row order)")
+    p.add_argument("--embeddings-pkl", default=None,
+                   help="mrclip_embeddings.pkl (matches CSV row order). "
+                        "Optional — omit to only generate dataset_raw.json for VAE encoding.")
     p.add_argument("--data-base-dir", default="/data/mr_niftis",
                    help="Root where NIfTI images live")
     p.add_argument("--embedding-base-dir", default="./embeddings",
@@ -95,13 +171,17 @@ def main():
     df = pd.read_csv(args.csv)
     print(f"CSV rows: {len(df)}")
 
-    # Load pkl to confirm row count matches
-    with open(args.embeddings_pkl, "rb") as f:
-        pkl = pickle.load(f)
-    assert len(pkl["embeddings"]) == len(df), (
-        f"PKL has {len(pkl['embeddings'])} entries but CSV has {len(df)} rows."
-    )
-    print(f"PKL entries: {len(pkl['embeddings'])} ✓ (matches CSV)")
+    # Load pkl only if provided
+    pkl = None
+    if args.embeddings_pkl is not None:
+        with open(args.embeddings_pkl, "rb") as f:
+            pkl = pickle.load(f)
+        assert len(pkl["embeddings"]) == len(df), (
+            f"PKL has {len(pkl['embeddings'])} entries but CSV has {len(df)} rows."
+        )
+        print(f"PKL entries: {len(pkl['embeddings'])} ✓ (matches CSV)")
+    else:
+        print("No --embeddings-pkl provided — will generate dataset_raw.json only.")
 
     raw_entries = []
     mrclip_entries = []
@@ -114,7 +194,8 @@ def main():
             continue
 
         rel_path = to_relative(abs_path, args.data_base_dir)
-        modality = sequence_to_modality(row.get("sequence", ""))
+        sequence = infer_sequence_from_row(row)
+        modality = sequence_to_modality(sequence)
 
         # 1. Entry for VAE encoding
         raw_entries.append({"image": rel_path, "modality": modality})

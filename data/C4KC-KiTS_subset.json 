@@ -1,0 +1,274 @@
+{
+  "training": [
+    {
+      "image": "KiTS-00186/2_arterial_emb_zs99.nii.gz",
+      "label": "KiTS-00186/mask_combined_label_zs99_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00066/3_arterial_emb_zs11.nii.gz",
+      "label": "KiTS-00066/mask_combined_label_zs11_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00012/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00012/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00055/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00055/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00193/100_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00193/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00142/7_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00142/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00069/3_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00069/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00124/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00124/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00208/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00208/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00116/9_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00116/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 0,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00061/4_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00061/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 0, 1, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00040/3_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00040/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00068/7_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00068/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00036/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00036/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00153/8_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00153/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00189/2_arterial_emb_zs107.nii.gz",
+      "label": "KiTS-00189/mask_combined_label_zs107_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00091/7_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00091/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00110/3_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00110/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00046/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00046/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00178/3_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00178/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00075/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00075/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00037/6_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00037/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00130/9_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00130/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00063/6_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00063/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00205/4_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00205/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00167/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00167/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00059/8_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00059/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 1, 0]
+    },
+    {
+      "image": "KiTS-00172/3_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00172/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00093/7_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00093/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    },
+    {
+      "image": "KiTS-00197/2_arterial_emb_zs0.nii.gz",
+      "label": "KiTS-00197/mask_combined_label_zs0_wbdm.nii.gz",
+      "fold": 1,
+      "dim": [512, 512, 512],
+      "spacing": [1, 1, 1],
+      "top_region_index": [0, 1, 0, 0],
+      "bottom_region_index": [0, 0, 0, 1]
+    }
+  ]
+}
