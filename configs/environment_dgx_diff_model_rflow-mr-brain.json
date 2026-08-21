@@ -1,10 +1,10 @@
 {
     "data_base_dir": "/nfs/home/mavci/MR/MR-RATE/mri",
-    "embedding_base_dir": "./embeddings",
-    "json_data_list": "./data/dataset_mrclip.json",
+    "embedding_base_dir": "/nfs/home/mavci/projects/AMA-CLIP/codes/NV-Generate-CTMR-A/embeddings",
+    "json_data_list": "/nfs/home/mavci/projects/AMA-CLIP/codes/NV-Generate-CTMR-A/data/dataset_mrclip.json",
     "model_dir": "./models",
     "model_filename": "diff_unet_3d_rflow-mr-brain_v1.pt",
-    "output_dir": "./output",
+    "output_dir": "/nfs/home/mavci/projects/AMA-CLIP/codes/NV-Generate-CTMR-A/output",
     "output_prefix": "unet_3d",
     "trained_autoencoder_path": "models/autoencoder_v1.pt",
     "existing_ckpt_filepath": "./models/diff_unet_3d_rflow-mr-brain_v1.pt",
