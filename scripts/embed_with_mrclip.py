@@ -61,7 +61,7 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument("--out-pkl", default="data/mrclip_embeddings.pkl",
                    help="Output pickle path")
-    p.add_argument("--out-json", default="dataset_mrclip.json",
+    p.add_argument("--out-json", default="data/dataset_mrclip.json",
                    help="Output dataset JSON for MAISI training")
     p.add_argument("--embedding-base-dir", default="./embeddings",
                    help="Base dir where VAE latent embeddings (_emb.nii.gz) are stored")

@@ -18,8 +18,8 @@ DGX usage (batch00 CSV, absolute NFS paths):
       --embeddings-pkl data/mrclip_embeddings.pkl \\
       --data-base-dir /nfs/home/mavci/MR/MR-RATE/mri \\
       --embedding-base-dir ./embeddings \\
-      --out-raw-json dataset_raw.json \\
-      --out-mrclip-json dataset_mrclip.json \\
+      --out-raw-json data/dataset_raw.json \\
+      --out-mrclip-json data/dataset_mrclip.json \\
       --val-fraction 0.05
 
 Original MIDI usage:
@@ -28,8 +28,8 @@ Original MIDI usage:
       --embeddings-pkl data/mrclip_embeddings.pkl \\
       --data-base-dir /data/mr_niftis \\
       --embedding-base-dir ./embeddings \\
-      --out-raw-json dataset_raw.json \\
-      --out-mrclip-json dataset_mrclip.json \\
+      --out-raw-json data/dataset_raw.json \\
+      --out-mrclip-json data/dataset_mrclip.json \\
       --val-fraction 0.05
 """
 
@@ -159,9 +159,9 @@ def main():
                    help="Root where NIfTI images live")
     p.add_argument("--embedding-base-dir", default="./embeddings",
                    help="Where VAE _emb.nii.gz files are stored")
-    p.add_argument("--out-raw-json", default="dataset_raw.json",
+    p.add_argument("--out-raw-json", default="data/dataset_raw.json",
                    help="Output JSON for VAE encoding step")
-    p.add_argument("--out-mrclip-json", default="dataset_mrclip.json",
+    p.add_argument("--out-mrclip-json", default="data/dataset_mrclip.json",
                    help="Output JSON for MR-CLIP fine-tuning")
     p.add_argument("--val-fraction", type=float, default=0.05)
     args = p.parse_args()
@@ -229,6 +229,10 @@ def main():
     print(f"VAE embeddings already exist: {len(mrclip_entries)}/{len(raw_entries)}")
 
     # Write raw JSON for VAE
+    raw_dir = os.path.dirname(args.out_raw_json)
+    if raw_dir:
+        os.makedirs(raw_dir, exist_ok=True)
+
     idx_list = list(range(len(raw_entries)))
     random.shuffle(idx_list)
     n_val = max(1, int(len(raw_entries) * args.val_fraction))
@@ -242,6 +246,10 @@ def main():
 
     # Write mrclip JSON for training
     if mrclip_entries:
+        mrclip_dir = os.path.dirname(args.out_mrclip_json)
+        if mrclip_dir:
+            os.makedirs(mrclip_dir, exist_ok=True)
+
         idx2 = list(range(len(mrclip_entries)))
         random.shuffle(idx2)
         n_val2 = max(1, int(len(mrclip_entries) * args.val_fraction))
@@ -258,3 +266,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
