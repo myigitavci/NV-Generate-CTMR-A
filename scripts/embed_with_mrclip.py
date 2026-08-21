@@ -172,6 +172,14 @@ def resolve_filepath(raw_path: str, data_root: str) -> str:
     return raw_path   # return as-is; will be flagged later
 
 
+def to_relative(abs_path: str, data_root: str) -> str:
+    """Strip data_root prefix so path is relative to it."""
+    if abs_path.startswith(data_root):
+        rel = abs_path[len(data_root):]
+        return rel.lstrip("/")
+    return abs_path
+
+
 # ---------------------------------------------------------------------------
 # Dataset JSON builder
 # ---------------------------------------------------------------------------
@@ -259,18 +267,22 @@ def main():
     missing_emb = 0
     for pkl_idx, (_, row) in enumerate(tqdm(df.iterrows(), total=len(df), desc="Checking emb")):
         raw = row["resolved_path"]
+        rel_path = to_relative(raw, args.data_root)
+
         # Derive _emb.nii.gz path
-        stem = raw
+        stem = rel_path
         for ext in (".nii.gz", ".nii"):
             if stem.endswith(ext):
                 stem = stem[: -len(ext)]
                 break
-        emb_path = stem + "_emb.nii.gz"
-        # Expand relative to embedding_base_dir if not absolute
-        if not os.path.isabs(emb_path):
-            emb_path = os.path.join(args.embedding_base_dir, emb_path)
-        if os.path.exists(emb_path):
-            valid_rows_list.append({**row.to_dict(), "emb_path": emb_path, "pkl_idx": pkl_idx})
+        emb_rel_path = stem + "_emb.nii.gz"
+        full_emb_path = os.path.join(args.embedding_base_dir, emb_rel_path)
+
+        if os.path.exists(full_emb_path):
+            valid_rows_list.append({**row.to_dict(), "emb_path": emb_rel_path, "pkl_idx": pkl_idx})
+        elif os.path.exists(stem + "_emb.nii.gz"):
+            # Fallback if saved alongside original file
+            valid_rows_list.append({**row.to_dict(), "emb_path": stem + "_emb.nii.gz", "pkl_idx": pkl_idx})
         else:
             missing_emb += 1
 
@@ -280,6 +292,7 @@ def main():
         valid_df = pd.DataFrame(valid_rows_list).reset_index(drop=True)
         dataset = build_dataset_json(valid_df, args.val_fraction)
         out_json = Path(args.out_json)
+        out_json.parent.mkdir(parents=True, exist_ok=True)
         with open(out_json, "w") as f:
             json.dump(dataset, f, indent=2)
         print(f"Saved dataset JSON: {out_json}")
