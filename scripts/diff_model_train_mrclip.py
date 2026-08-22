@@ -426,15 +426,18 @@ def save_checkpoint_mrclip(
     num_train_timesteps: int,
 ) -> None:
     raw = model.module if isinstance(model, DistributedDataParallel) else model
+    sf_val = float(scale_factor.item() if hasattr(scale_factor, "item") else scale_factor)
+    os.makedirs(ckpt_folder, exist_ok=True)
+    out_path = os.path.join(ckpt_folder, filename)
     torch.save(
         {
             "epoch": epoch + 1,
-            "loss": loss,
-            "scale_factor": scale_factor,
+            "loss": float(loss),
+            "scale_factor": torch.tensor(sf_val, dtype=torch.float32),
             "num_train_timesteps": num_train_timesteps,
             "model_state_dict": raw.state_dict(),
         },
-        os.path.join(ckpt_folder, filename),
+        out_path,
     )
 
 
