@@ -1,0 +1,16 @@
+Total matching files found: 13004
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_train_with_planes_stripped_shuffled_slc_120_to_220.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_train_with_planes_stripped_shuffled_slc_120_to_220_simplified.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_train_with_planes_stripped_shuffled_slc_120_to_220_simplified_1M.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_val_with_planes_stripped_shuffled_slc_120_to_220.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_val_with_planes_stripped_shuffled_slc_120_to_220_simplified.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_val_with_planes_stripped_shuffled_slc_120_to_220_simplified_100k.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/mr_val_with_planes_stripped_shuffled_slc_120_to_220_columns_separated.csv
+  /home/mav24/Projects/AMA-CLIP/data/csv_batches_registered_with_scan_planes_stripped/csv_batches_registered_with_scan_planes_stripped
+  /home/mav24/Projects/AMA-CLIP/data/cleared_data/csv_batches_registered_with_scan_planes_stripped
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/registered_png_with_planes_stripped
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/mr_test_3Det_20_rt_20_OASIS3_simplified_numerical_labels_anatomical_with_pair_ids_not_stripped.csv
+  /home/mav24/Projects/AMA-CLIP/logs/grid-stripped-vit-registered-with-planes-g3-lr-1e4-b-3000-wd-02-warmup-2000-epoch-100-augnew2-text-dropout-01-tokenlength-98
+  /home/mav24/Projects/AMA-CLIP/logs/grid-stripped-vit-registered-with-planes-g3-lr-1e4-b-3000-wd-02-warmup-2000-epoch-100-augnew2-text-dropout-tokenlength-98-distance
+  /home/mav24/Projects/AMA-CLIP/logs/gridnewdata-stripped-vit-registered-with-planes-g3-lr-1e4-b-3000-wd-02-warmup-2000-epoch-100-augnew2-text-dropout-tokenlength-98

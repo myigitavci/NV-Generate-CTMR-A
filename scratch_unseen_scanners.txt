@@ -1,0 +1,65 @@
+=== UNIQUE SCANNERS IN UNSEEN OASIS DATASET ===
+
+--- T2 Scanners ---
+Scanner: GE, DISCOVERY_MR450, 1.5 (count=102)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 PROPELLER, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.133616, 3.6, NONE, 160.145)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 PROPELLER, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.144, 3, NONE, 160.145)
+
+Scanner: GE, DISCOVERY_MR750, 3 (count=69)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FRFSE, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.065136, 4.38, NONE, 111)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FRFSE, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.064848, 4.38, NONE, 111)
+
+Scanner: GE, SIGNA_HDx, 1.5 (count=302)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1064, 5.74, NONE, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02128, 5.74, NONE, 90)
+
+Scanner: GE, SIGNA_HDx, 3 (count=12)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 3), Acquisition (Description, Sequence, Variant): (AX T2 FR-FSE 2mm 320 TE60, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.065328, 4.38, NONE, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 3), Acquisition (Description, Sequence, Variant): (AX T2 FR-FSE 2mm 320 TE60, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.065328, 4.38, NONE, 90)
+
+Scanner: GE, Signa_HDxt, 1.5 (count=419)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.10184, 5.9, NONE, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.020368, 5.9, NONE, 90)
+
+Scanner: Siemens, Aera, 1.5 (count=251)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_tra_384_p2, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.087, 3.96, NONE, 150)
+  Sample prompt: A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_sag_384, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.087, 4.7, NONE, 150)
+
+Scanner: Siemens, Avanto, 1.5 (count=273)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.086, 3.68, NONE, 150)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.014, 3.68, NONE, 150)
+
+Scanner: Siemens, Symphony, 1.5 (count=70)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.098, 3.25, NONE, 150)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_fl2d_tra_hemo, GR, SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.026, 0.453, NONE, 20)
+
+
+--- FLAIR Scanners ---
+Scanner: GE, DISCOVERY_MR450, 1.5 (count=84)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.124308, 8, 2, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.125388, 7.1, 2, 160)
+
+Scanner: GE, DISCOVERY_MR750, 3 (count=72)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.128644, 8, 2, 111)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.128412, 8, 2, 111)
+
+Scanner: GE, SIGNA_HDx, 1.5 (count=123)
+  Sample prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Cor T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1294, 8.002, 2, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.121968, 8.002, 2, 90)
+
+Scanner: GE, SIGNA_HDx, 3 (count=9)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 3), Acquisition (Description, Sequence, Variant): (T2 FLAIR propeller Simon Dezoni, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.163152, 10, 2.5, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 3), Acquisition (Description, Sequence, Variant): (AX T2 FLAIR 4mm 256 TE120, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.128088, 8.002, 2, 90)
+
+Scanner: GE, Signa_HDxt, 1.5 (count=198)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.12926, 8.002, 2, 90)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (T2 FLAIR propeller, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.119671, 10, 2.5, 90)
+
+Scanner: Siemens, Aera, 1.5 (count=2)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (Cor T2 FLAIR, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.011, 3.22, NONE, 150)
+  Sample prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (Cor T2 FLAIR, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.096, 3.22, NONE, 150)
+
+Scanner: Siemens, Avanto, 1.5 (count=5)
+  Sample prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (FLAIR Coronal, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.109, 7.5, 2.5, 150)
+  Sample prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (COR FLAIR, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.111, 9.84, 2.5, 150)
+

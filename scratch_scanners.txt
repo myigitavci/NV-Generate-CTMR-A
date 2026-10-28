@@ -1,0 +1,7 @@
+Columns: ['filepath', 'text', 'label']
+
+Scanners extracted from text column:
+   14723 : Philips, Achieva_dStream, 3.0
+   10829 : Philips, Ingenia, 1.5
+    5578 : Siemens, MAGNETOM_Vida, 3.0
+    4734 : Siemens, MAGNETOM_Sola, 1.5

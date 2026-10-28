@@ -85,37 +85,64 @@ def load_mrclip(
     context_length: int,
     device: str,
 ):
-    """Load a ViT-B-16 MR-CLIP model + tokenizer from a training checkpoint."""
+    """Load a ViT-B-16 3D MR-CLIP model + tokenizer from a training checkpoint."""
     if open_clip_src not in sys.path:
         sys.path.insert(0, open_clip_src)
 
     from open_clip import create_model_and_transforms, get_tokenizer  # type: ignore
 
-    model, _, _ = create_model_and_transforms(
-        "ViT-B-16",
-        device=device,
-        textcontextlength=context_length,
-        force_image_size=224,
-    )
+    # Attempt to instantiate with 3D vision encoder (vis_3d=True)
+    model = None
+    preprocess_val = None
+    for kwargs in [
+        {"model_name": "ViT-B-16", "device": device, "textcontextlength": context_length, "force_image_size": 128, "vis_3d": True},
+        {"model_name": "ViT-B-16", "device": device, "textcontextlength": context_length, "vis_3d": True},
+        {"model_name": "ViT-B-16", "device": device, "textcontextlength": context_length, "force_image_size": 128},
+        {"model_name": "ViT-B-16", "device": device, "textcontextlength": context_length, "force_image_size": 224},
+    ]:
+        try:
+            model, _, preprocess_val = create_model_and_transforms(**kwargs)
+            print(f"[CLIP] Instantiated model with config: {kwargs}")
+            break
+        except TypeError:
+            continue
+
+    if model is None:
+        model, _, preprocess_val = create_model_and_transforms("ViT-B-16", device=device, textcontextlength=context_length)
+    model.preprocess_val = preprocess_val
 
     ckpt = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
     sd = ckpt.get("state_dict", ckpt)
     # strip 'module.' prefix if saved from DDP
-    if next(iter(sd)).startswith("module."):
-        sd = {k[len("module."):]: v for k, v in sd.items()}
+    cleaned_sd = {}
+    for k, v in sd.items():
+        k_clean = k[len("module."):] if k.startswith("module.") else k
+        cleaned_sd[k_clean] = v
 
-    # filter mismatched shapes (e.g. 3-channel vs 1-channel conv)
     model_sd = model.state_dict()
-    filtered = {k: v for k, v in sd.items()
-                if k in model_sd and v.shape == model_sd[k].shape}
-    skipped = [k for k in sd if k not in filtered]
-    if skipped:
-        print(f"[CLIP] Skipping {len(skipped)} mismatched keys: {skipped[:5]}"
-              f"{'...' if len(skipped) > 5 else ''}")
+    filtered = {}
 
-    missing, unexpected = model.load_state_dict(filtered, strict=False)
+    for k, v in cleaned_sd.items():
+        if k in model_sd and v.shape == model_sd[k].shape:
+            filtered[k] = v
+        elif k.startswith("visual.encoder."):
+            remapped_k = k.replace("visual.encoder.", "visual.")
+            if remapped_k in model_sd and v.shape == model_sd[remapped_k].shape:
+                filtered[remapped_k] = v
+        elif k.startswith("visual.") and not k.startswith("visual.encoder."):
+            remapped_k = k.replace("visual.", "visual.encoder.")
+            if remapped_k in model_sd and v.shape == model_sd[remapped_k].shape:
+                filtered[remapped_k] = v
+
+    missing = [k for k in model_sd if k not in filtered]
+    loaded_count = len(filtered)
+    total_model_keys = len(model_sd)
+    print(f"[CLIP] Successfully matched and loaded {loaded_count}/{total_model_keys} keys from {checkpoint_path}")
     if missing:
-        print(f"[CLIP] {len(missing)} keys not loaded from checkpoint")
+        visual_missing = [k for k in missing if "visual" in k]
+        print(f"[CLIP] Unmatched visual model keys ({len(visual_missing)}): {visual_missing[:6]}")
+
+    missing_keys, unexpected_keys = model.load_state_dict(filtered, strict=False)
 
     model = model.to(device).eval()
     for param in model.parameters():

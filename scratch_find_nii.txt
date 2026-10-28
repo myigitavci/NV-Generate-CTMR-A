@@ -1,0 +1,26 @@
+Total NIfTI files found: 146584
+  /home/mav24/Projects/AMA-CLIP/open_clip/src/batch_volumes.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run02_to_FLAIR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run01_to_FLAIR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2STAR_to_FLAIR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2W_to_FLAIR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_FLAIR_to_T1W_run02_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run01_to_T1W_run02_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2STAR_to_T1W_run02_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2W_to_T1W_run02_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_FLAIR_to_T1W_run01_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run02_to_T1W_run01_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2STAR_to_T1W_run01_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2W_to_T1W_run01_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_FLAIR_to_T2STAR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run02_to_T2STAR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run01_to_T2STAR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2W_to_T2STAR_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_FLAIR_to_T2W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run02_to_T2W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T1W_run01_to_T2W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2STAR_to_T2W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0001/sub-PAIR_0001_T2W_to_T2W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0002/sub-PAIR_0002_T2STAR_to_T1W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0002/sub-PAIR_0002_T2W_to_T1W_harmonized_fusion.nii.gz
+  /home/mav24/Projects/haca3/oasis3_out/PAIR_0002/sub-PAIR_0002_T1W_to_T2STAR_harmonized_fusion.nii.gz

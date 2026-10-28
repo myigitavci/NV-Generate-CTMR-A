@@ -1,0 +1,21 @@
+Found files count: 24
+output/validation_experiments/exp2_multimodal_panel/subject_01_Proton.nii.gz (256, 256, 128) mean: 149.2784343765402 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_01_T1-Weighted.nii.gz (256, 256, 128) mean: 0.02637868611420486 max: 1.702760934829712
+output/validation_experiments/exp2_multimodal_panel/subject_01_T1_Weighted.nii.gz (256, 256, 128) mean: 32.34400907499639 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_01_T2*.nii.gz (256, 256, 128) mean: 75.35630056098444 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_01_T2-FLAIR.nii.gz (256, 256, 128) mean: 0.14716832004549527 max: 1.371285080909729
+output/validation_experiments/exp2_multimodal_panel/subject_01_T2-Weighted.nii.gz (256, 256, 128) mean: 0.026602665836080047 max: 2.0019075870513916
+output/validation_experiments/exp2_multimodal_panel/subject_01_T2_FLAIR.nii.gz (256, 256, 128) mean: 140.58378875666722 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_01_T2_Weighted.nii.gz (256, 256, 128) mean: 77.83096131318689 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_02_Proton.nii.gz (256, 256, 128) mean: 153.08642863124078 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_02_T1-Weighted.nii.gz (256, 256, 128) mean: 0.046849416748789015 max: 1.9501192569732666
+output/validation_experiments/exp2_multimodal_panel/subject_02_T1_Weighted.nii.gz (256, 256, 128) mean: 63.114700377884674 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_02_T2*.nii.gz (256, 256, 128) mean: 90.63182417554299 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_02_T2-FLAIR.nii.gz (256, 256, 128) mean: 0.12677918329598262 max: 1.5646092891693115
+output/validation_experiments/exp2_multimodal_panel/subject_02_T2-Weighted.nii.gz (256, 256, 128) mean: 0.03188879898346466 max: 1.8164777755737305
+output/validation_experiments/exp2_multimodal_panel/subject_02_T2_FLAIR.nii.gz (256, 256, 128) mean: 131.7898580932365 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_02_T2_Weighted.nii.gz (256, 256, 128) mean: 86.56785566644157 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_03_Proton.nii.gz (256, 256, 128) mean: 150.11721771074644 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_03_T1-Weighted.nii.gz (256, 256, 128) mean: 0.1065475803979357 max: 1.3197898864746094
+output/validation_experiments/exp2_multimodal_panel/subject_03_T1_Weighted.nii.gz (256, 256, 128) mean: 29.27675233107084 max: 1000.0
+output/validation_experiments/exp2_multimodal_panel/subject_03_T2*.nii.gz (256, 256, 128) mean: 88.11705794368481 max: 1000.0

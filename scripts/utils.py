@@ -32,6 +32,39 @@ from scipy import ndimage, stats
 from torch import Tensor
 
 
+def _patch_monai_metakeys():
+    try:
+        from monai.utils.enums import MetaKeys
+
+        orig_missing = getattr(MetaKeys, "_missing_", None)
+
+        @classmethod
+        def _safe_missing(cls, value):
+            if orig_missing is not None:
+                try:
+                    res = orig_missing(value)
+                    if isinstance(res, cls):
+                        return res
+                except Exception:
+                    pass
+            try:
+                member = str.__new__(cls, value)
+            except Exception:
+                member = object.__new__(cls)
+            member._name_ = str(value).upper()
+            member._value_ = value
+            cls._value2member_map_[value] = member
+            cls._member_map_[member._name_] = member
+            return member
+
+        MetaKeys._missing_ = _safe_missing
+    except Exception:
+        pass
+
+
+_patch_monai_metakeys()
+
+
 def remap_labels(mask, label_dict_remap_json):
     """
     Remap labels in the mask according to the provided label dictionary.

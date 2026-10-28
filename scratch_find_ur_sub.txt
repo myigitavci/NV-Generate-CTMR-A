@@ -1,0 +1,11 @@
+Total matching ur_sub files found: 72323
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat2/NIFTI/ur_sub-OAS31000_ses-d0072_acq-TSE_T2w_stripped_stripped.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat2/NIFTI/ur_sub-OAS31000_ses-d0072_acq-TSE_T2w.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat3/NIFTI/ur_sub-OAS31000_ses-d0072_FLAIR_stripped_stripped.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat3/NIFTI/ur_sub-OAS31000_ses-d0072_FLAIR.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat4/NIFTI/ur_sub-OAS31000_ses-d0072_T1w_stripped_stripped.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat4/NIFTI/ur_sub-OAS31000_ses-d0072_T1w.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat5/NIFTI/ur_sub-OAS31000_ses-d0072_T2star_stripped_stripped.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31000/OAS31000_MR_d0072/anat5/NIFTI/ur_sub-OAS31000_ses-d0072_T2star.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31001/OAS31001_MR_d0064/anat1/NIFTI/ur_sub-OAS31001_ses-d0064_acq-TSE_echo-1_T2w_stripped_stripped.nii.gz
+  /home/mav24/Projects/AMA-CLIP/data/OASIS3/nifti/OASIS3/OAS31001/OAS31001_MR_d0064/anat1/NIFTI/ur_sub-OAS31001_ses-d0064_acq-TSE_echo-1_T2w.nii.gz

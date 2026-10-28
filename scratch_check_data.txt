@@ -1,0 +1,3 @@
+CSV exists: True
+CSV shape: (22752, 6)
+Columns: ['filepath', 'text', 'label', 'orientation', 'pair', 'sequence']

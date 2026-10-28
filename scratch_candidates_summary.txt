@@ -1,0 +1,155 @@
+=== T2W (1157) ===
+  ID 0: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-bb9e7d73d500d9506f1a6466fbb3d8/ses-20131211164020/anat/ur_sub-bb9e7d73d500d9506f1a6466fbb3d8_ses-20131211164020_run-4_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.10184, 5.9, NONE, 90)
+
+  ID 3: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-8dcf9bbc37f4cd5278d3010d1f8296/ses-20170621102001/anat/ur_sub-8dcf9bbc37f4cd5278d3010d1f8296_ses-20170621102001_run-8_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_tra_384_p2, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.087, 3.96, NONE, 150)
+
+  ID 4: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-f4f30514bd44be950eb9100127a593/ses-20190311173347/anat/ur_sub-f4f30514bd44be950eb9100127a593_ses-20190311173347_run-3_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (AXIAL PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.11336, 4.52, NONE, 90)
+
+  ID 7: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-10514f618630009705170e134c5d72/ses-20160911150343/anat/ur_sub-10514f618630009705170e134c5d72_ses-20160911150343_run-15_T2w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_sag_384, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.087, 4.7, NONE, 150)
+
+  ID 8: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-5_rec-B0_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (DWI ep2d_diff_orth, EP_SE_EP, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.111, 4.4, NONE, 90)
+
+  ID 9: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-8_rec-B0_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (DWI ep2d_diff_orth, EP_SE_EP, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.111, 4.4, NONE, 90)
+
+  ID 10: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-2_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.098, 3.25, NONE, 150)
+
+  ID 12: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ec20a4c25c87bab6f702c0fb4d6576/ses-20150709132847/anat/ur_sub-ec20a4c25c87bab6f702c0fb4d6576_ses-20150709132847_run-3_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.102, 5.2, NONE, 90)
+
+  ID 15: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-3d77f03840cf04bdb6fa3af218258d/ses-20150708115138/anat/ur_sub-3d77f03840cf04bdb6fa3af218258d_ses-20150708115138_run-3_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (T2 propeller, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.0895725, 5, NONE, 90)
+
+  ID 16: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0d00eec2a4d7191e5f407b3ad6d52d/ses-20121205173935/anat/ur_sub-0d00eec2a4d7191e5f407b3ad6d52d_ses-20121205173935_run-4_T2w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1064, 5.74, NONE, 90)
+
+=== PDW (481) ===
+  ID 1: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-bb9e7d73d500d9506f1a6466fbb3d8/ses-20131211164020/anat/ur_sub-bb9e7d73d500d9506f1a6466fbb3d8_ses-20131211164020_run-4_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.020368, 5.9, NONE, 90)
+
+  ID 5: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-f4f30514bd44be950eb9100127a593/ses-20190311173347/anat/ur_sub-f4f30514bd44be950eb9100127a593_ses-20190311173347_run-3_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (AXIAL PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.022672, 4.52, NONE, 90)
+
+  ID 17: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0d00eec2a4d7191e5f407b3ad6d52d/ses-20121205173935/anat/ur_sub-0d00eec2a4d7191e5f407b3ad6d52d_ses-20121205173935_run-4_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02128, 5.74, NONE, 90)
+
+  ID 19: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-e9033dd4d07a8df2ea7f57ca86003f/ses-20150126154143/anat/ur_sub-e9033dd4d07a8df2ea7f57ca86003f_ses-20150126154143_run-2_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.014, 3.68, NONE, 150)
+
+  ID 25: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-eb122c97f1229a7b947da1e87ec823/ses-20120223101657/anat/ur_sub-eb122c97f1229a7b947da1e87ec823_ses-20120223101657_run-5_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (T2-weighted trace, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02312, 6.02, NONE, 90)
+
+  ID 29: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-062664f6e8380a87de426f96d3de72/ses-20140519155043/anat/ur_sub-062664f6e8380a87de426f96d3de72_ses-20140519155043_run-2_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.014, 3.99, NONE, 150)
+
+  ID 33: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-5b17fc792f570b183bc906cb181b32/ses-20160918124053/anat/ur_sub-5b17fc792f570b183bc906cb181b32_ses-20160918124053_run-12_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra_p2_384_5mm_post gad, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.011, 3.79, NONE, 150)
+
+  ID 35: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-c00bfce822ab610199fd6415ecabef/ses-20131002132004/anat/ur_sub-c00bfce822ab610199fd6415ecabef_ses-20131002132004_run-4_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.019712, 5.36, NONE, 90)
+
+  ID 38: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-df1924f97ca2143a485db266e990de/ses-20150115180640/anat/ur_sub-df1924f97ca2143a485db266e990de_ses-20150115180640_run-6_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2 Post Gad, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.020448, 5.92, NONE, 90)
+
+  ID 48: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-eb0409947f9fe98323e7a08e55f8e5/ses-20180328142817/anat/ur_sub-eb0409947f9fe98323e7a08e55f8e5_ses-20180328142817_run-2_PDw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.013, 4.34, NONE, 150)
+
+=== T2STARW (100) ===
+  ID 2: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-8dcf9bbc37f4cd5278d3010d1f8296/ses-20170621102001/anat/ur_sub-8dcf9bbc37f4cd5278d3010d1f8296_ses-20170621102001_run-6_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+  ID 11: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-3_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_fl2d_tra_hemo, GR, SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.026, 0.453, NONE, 20)
+
+  ID 37: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-851ebc4ba5b3344fd268bac214a5d7/ses-20161206135736/anat/ur_sub-851ebc4ba5b3344fd268bac214a5d7_ses-20161206135736_run-6_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2* GRE, GR, SS), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.015, 0.46, NONE, 20)
+
+  ID 41: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-6b73e2d033fab7c5cc5ec3ad224927/ses-20161115080820/anat/ur_sub-6b73e2d033fab7c5cc5ec3ad224927_ses-20161115080820_run-5_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+  ID 50: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-eb0409947f9fe98323e7a08e55f8e5/ses-20180328142817/anat/ur_sub-eb0409947f9fe98323e7a08e55f8e5_ses-20180328142817_run-6_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_fl2d_tra_hemo, GR, SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.026, 0.771, NONE, 20)
+
+  ID 71: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ac39d83f07778eaafac7759d6c18cd/ses-20151216154719/anat/ur_sub-ac39d83f07778eaafac7759d6c18cd_ses-20151216154719_run-5_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+  ID 78: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-02ab6563af2609b8483eb9457224af/ses-20171130124836/anat/ur_sub-02ab6563af2609b8483eb9457224af_ses-20171130124836_run-5_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+  ID 125: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-db49e804da455c72e2c394c3c2049c/ses-20120213155612/anat/ur_sub-db49e804da455c72e2c394c3c2049c_ses-20120213155612_run-7_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2* GRE, GR, SS), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.015, 0.64, NONE, 20)
+
+  ID 130: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-fa8682a20c12c7663d7d8f1167a97d/ses-20161212170414/anat/ur_sub-fa8682a20c12c7663d7d8f1167a97d_ses-20161212170414_run-5_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+  ID 152: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-e3c9fc45e40608013682522fba0102/ses-20170510142157/anat/ur_sub-e3c9fc45e40608013682522fba0102_ses-20170510142157_run-5_T2starw_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+=== T1W (187) ===
+  ID 6: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-10514f618630009705170e134c5d72/ses-20160911150343/anat/ur_sub-10514f618630009705170e134c5d72_ses-20160911150343_run-14_T1w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t1_se_sag_320, SE, SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.0089, 0.45, NONE, 90)
+
+  ID 21: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-a96a41545db7f70dd8ee9dd59e8b87/ses-20181016154603/anat/ur_sub-a96a41545db7f70dd8ee9dd59e8b87_ses-20181016154603_run-10_T1w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Sag T1 SE, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.009, 0.38, NONE, 90)
+
+  ID 56: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-506768372868054580d2f1d866a15f/ses-20170423150601/anat/ur_sub-506768372868054580d2f1d866a15f_ses-20170423150601_run-18_T1w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t1_tse_tra_2mm, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.01, 0.92, NONE, 150)
+
+  ID 68: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-8037be111bf376410aac62e86337b9/ses-20140329090825/anat/ur_sub-8037be111bf376410aac62e86337b9_ses-20140329090825_run-7_T1w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Sag T1 SE, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.008, 0.5, NONE, 90)
+
+  ID 76: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-6fce55a1a2aa64a8c08f15c204ce23/ses-20110713151747/anat/ur_sub-6fce55a1a2aa64a8c08f15c204ce23_ses-20110713151747_run-7_T1w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Sag T1 SE, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.008, 0.5, NONE, 90)
+
+  ID 79: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-318c3240d480f0deaf0772f03a5ad1/ses-20140826114958/anat/ur_sub-318c3240d480f0deaf0772f03a5ad1_ses-20140826114958_run-5_T1w_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T1, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02, 0.44, NONE, 90)
+
+  ID 81: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-c8ac7abd0de4e8ff6713b6092406db/ses-20130819125700/anat/ur_sub-c8ac7abd0de4e8ff6713b6092406db_ses-20130819125700_run-4_T1w_stripped.nii
+     A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Cor T1, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02, 0.4, NONE, 90)
+
+  ID 91: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-5b8f9af08e0b856fcc0356bac6d8d2/ses-20171002161203/anat/ur_sub-5b8f9af08e0b856fcc0356bac6d8d2_ses-20171002161203_run-6_T1w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Sag T1 SE, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.009, 0.42, NONE, 90)
+
+  ID 109: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-6c3e9fde21a1f417a96b90d3305854/ses-20180717081939/anat/ur_sub-6c3e9fde21a1f417a96b90d3305854_ses-20180717081939_run-9_T1w_stripped.nii
+     A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t1_se_cor, SE, SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.011, 0.501, NONE, 90)
+
+  ID 110: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-d8132e33fc78de2fe66e72283a8763/ses-20181026103554/anat/ur_sub-d8132e33fc78de2fe66e72283a8763_ses-20181026103554_run-6_T1w_stripped.nii
+     A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Sag T1 SE, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.009, 0.38, NONE, 90)
+
+=== FLAIR (650) ===
+  ID 13: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ec20a4c25c87bab6f702c0fb4d6576/ses-20150709132847/anat/ur_sub-ec20a4c25c87bab6f702c0fb4d6576_ses-20150709132847_run-5_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.12926, 8.002, 2, 90)
+
+  ID 14: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-3d77f03840cf04bdb6fa3af218258d/ses-20150708115138/anat/ur_sub-3d77f03840cf04bdb6fa3af218258d_ses-20150708115138_run-5_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (T2 FLAIR propeller, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.119671, 10, 2.5, 90)
+
+  ID 23: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-427d1dcf34881892ef5f5aa443af1a/ses-20180205163044/anat/ur_sub-427d1dcf34881892ef5f5aa443af1a_ses-20180205163044_run-7_FLAIR_stripped.nii
+     A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (CORONAL FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.132048, 8.002, 2, 90)
+
+  ID 27: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-d036561e59c36bc9aea076803bc09f/ses-20120329190053/anat/ur_sub-d036561e59c36bc9aea076803bc09f_ses-20120329190053_run-7_FLAIR_stripped.nii
+     A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Cor T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1294, 8.002, 2, 90)
+
+  ID 28: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-062664f6e8380a87de426f96d3de72/ses-20140519155043/anat/ur_sub-062664f6e8380a87de426f96d3de72_ses-20140519155043_run-3_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t2_tirm_tra_dark-fl_pat2, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.114, 9, 2.5, 150)
+
+  ID 42: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ff1a632f2214ef0544c6d44818a514/ses-20140828114708/anat/ur_sub-ff1a632f2214ef0544c6d44818a514_ses-20140828114708_run-5_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.12926, 8.002, 2, 90)
+
+  ID 45: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-f2c94b49e6b9f216dc23fd9c5d6b77/ses-20131002125200/anat/ur_sub-f2c94b49e6b9f216dc23fd9c5d6b77_ses-20131002125200_run-5_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.121968, 8.002, 2, 90)
+
+  ID 47: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-e8c675b9f38d1f52c38dc3d715474b/ses-20150715143955/anat/ur_sub-e8c675b9f38d1f52c38dc3d715474b_ses-20150715143955_run-8_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (CORONAL STIR, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.011, 3.45, NONE, 150)
+
+  ID 52: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ccd8054a6479164cf13aa84504dfbc/ses-20181002145736/anat/ur_sub-ccd8054a6479164cf13aa84504dfbc_ses-20181002145736_run-5_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.12012, 8.002, 2, 90)
+
+  ID 58: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b1ae4ccd88c19d69f8e33ec6853e5e/ses-20131024123454/anat/ur_sub-b1ae4ccd88c19d69f8e33ec6853e5e_ses-20131024123454_run-3_FLAIR_stripped.nii
+     A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t2_tirm_tra_dark-fl_pat2, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.114, 9, 2.5, 150)
+

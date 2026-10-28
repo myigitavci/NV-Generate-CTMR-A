@@ -36,6 +36,7 @@ import json
 import logging
 import os
 import pickle
+import hashlib
 from datetime import datetime
 from pathlib import Path
 
@@ -53,6 +54,7 @@ from torch.nn.parallel import DistributedDataParallel
 
 from .diff_model_setting import initialize_distributed, load_config, setup_logging
 from .mrclip_conditioned_unet import MRCLIPConditionedUNet
+from .metadata_conditioning import MetadataEncoder, SequenceLabelEncoder
 from .utils import define_instance
 
 
@@ -66,10 +68,37 @@ class EmbeddingStore:
     Provides O(1) lookup by integer index.
     """
 
-    def __init__(self, pkl_path: str) -> None:
+    def __init__(self, pkl_path: str, conditioning: str = "mrclip",
+                 train_indices: list[int] | None = None, metadata_schema: dict | None = None,
+                 sequence_schema: dict | None = None) -> None:
+        if conditioning not in ("mrclip", "mlp", "sequence"):
+            raise ValueError(f"Unsupported conditioning: {conditioning}")
         with open(pkl_path, "rb") as f:
             data = pickle.load(f)
-        self.embeddings: np.ndarray = data["embeddings"].astype(np.float32)  # (N, 512)
+        if train_indices is not None and any(i < 0 or i >= len(data["embeddings"]) for i in train_indices):
+            raise ValueError("Dataset contains out-of-range conditioning indices")
+        self.metadata_schema = None
+        self.sequence_schema = None
+        if conditioning == "mlp":
+            texts = data.get("texts")
+            if texts is None or len(texts) != len(data["embeddings"]):
+                raise ValueError("MLP conditioning requires one stored metadata text per embedding")
+            encoder = (MetadataEncoder(metadata_schema) if metadata_schema is not None
+                       else MetadataEncoder.fit([texts[i] for i in train_indices or []]))
+            self.embeddings = encoder.transform(texts)
+            self.metadata_schema = encoder.schema
+        elif conditioning == "sequence":
+            labels = data.get("sequences")
+            if labels is None or len(labels) != len(data["embeddings"]):
+                raise ValueError("Sequence conditioning requires one coarse label per row in PKL 'sequences'")
+            encoder = (SequenceLabelEncoder(sequence_schema) if sequence_schema is not None
+                       else SequenceLabelEncoder.fit([labels[i] for i in train_indices or []]))
+            self.embeddings = encoder.transform(labels)
+            self.sequence_schema = encoder.schema
+        else:
+            self.embeddings = data["embeddings"].astype(np.float32)
+        if self.embeddings.ndim != 2 or not np.isfinite(self.embeddings).all():
+            raise ValueError("Conditioning features must be a finite two-dimensional array")
         self.filepaths: list = data.get("filepaths", [])
         print(f"[EmbeddingStore] Loaded {len(self.embeddings)} embeddings from {pkl_path}")
 
@@ -92,7 +121,7 @@ def load_filenames_and_indices(data_json_path: str) -> list:
     """
     with open(data_json_path) as f:
         js = json.load(f)
-    return js.get("training", js)  # fall back to the whole list if no split key
+    return js["training"] if isinstance(js, dict) else js
 
 
 def prepare_data_mrclip(
@@ -136,7 +165,7 @@ def prepare_data_mrclip(
             img_path = os.path.join(embedding_base_dir, img_path)
         info_path = img_path + ".json"
         if not os.path.exists(img_path):
-            continue
+            raise FileNotFoundError(f"Missing training latent: {img_path}. Check embedding_base_dir.")
         file_dicts.append({
             "image": img_path,
             "spacing": info_path if os.path.exists(info_path) else None,
@@ -164,6 +193,7 @@ def load_wrapped_unet(
     existing_ckpt: str | None,
     clip_embed_dim: int = 512,
     clip_dropout: float = 0.1,
+    conditioning: str = "mrclip",
 ) -> MRCLIPConditionedUNet:
     """
     Load base UNet, wrap with MRCLIPConditionedUNet, optionally restore checkpoint.
@@ -191,7 +221,11 @@ def load_wrapped_unet(
         # Check if this is a wrapped checkpoint (contains unet. or clip_projection.)
         has_wrapper_keys = any(k.startswith("clip_projection.") or k.startswith("unet.") for k in cleaned_state.keys())
         if has_wrapper_keys:
-            missing, unexpected = model.load_state_dict(cleaned_state, strict=False)
+            saved_conditioning = ckpt.get("conditioning", "mrclip")
+            if saved_conditioning != conditioning:
+                raise ValueError(f"Cannot initialize {conditioning} from a {saved_conditioning} wrapper. "
+                                 "Use the common pretrained base checkpoint for phase 1.")
+            missing, unexpected = model.load_state_dict(cleaned_state, strict=True)
         else:
             missing, unexpected = model.unet.load_state_dict(cleaned_state, strict=False)
 
@@ -395,7 +429,7 @@ def train_one_epoch_mrclip(
                 tb_writer.add_scalar("train/lr", current_lr, global_step)
                 tb_writer.flush()
 
-            if csv_file is not None and (_iter % 5 == 0 or _iter == len(train_loader)):
+            if csv_file and (_iter % 5 == 0 or _iter == len(train_loader)):
                 with open(csv_file, "a") as f_csv:
                     f_csv.write(f"{epoch+1},{_iter},{global_step},{loss.item():.6f},{loss_flow.item():.6f},{loss_clip_val:.6f},{current_lr:.8e}\n")
 
@@ -424,6 +458,7 @@ def save_checkpoint_mrclip(
     ckpt_folder: str,
     filename: str,
     num_train_timesteps: int,
+    conditioning_info: dict | None = None,
 ) -> None:
     raw = model.module if isinstance(model, DistributedDataParallel) else model
     sf_val = float(scale_factor.item() if hasattr(scale_factor, "item") else scale_factor)
@@ -436,6 +471,7 @@ def save_checkpoint_mrclip(
             "scale_factor": torch.tensor(sf_val, dtype=torch.float32),
             "num_train_timesteps": num_train_timesteps,
             "model_state_dict": raw.state_dict(),
+            **(conditioning_info or {}),
         },
         out_path,
     )
@@ -467,10 +503,31 @@ def diff_model_train_mrclip(
     clip_checkpoint: str | None = None,
     open_clip_src: str | None = None,
     clip_context_length: int = 98,
+    conditioning: str = "mrclip",
+    seed: int = 42,
+    model_dir: str | None = None,
 ) -> None:
+    if conditioning not in ("mrclip", "mlp", "sequence"):
+        raise ValueError("conditioning must be mrclip, mlp, or sequence")
+    if conditioning != "mrclip" and use_mr_clip_loss:
+        raise ValueError("The conditioning comparison uses the flow loss only; omit --mr-clip-loss for all arms")
     args = load_config(env_config_path, model_config_path, model_def_path)
     local_rank, world_size, device = initialize_distributed(num_gpus)
+    monai.utils.set_determinism(seed=seed)
     logger = setup_logging("mrclip_train")
+    if model_dir is not None:
+        args.model_dir = model_dir
+    initial_ckpt = existing_ckpt or getattr(args, "existing_ckpt_filepath", None)
+    if not initial_ckpt:
+        raise ValueError("Provide --existing-ckpt or existing_ckpt_filepath for pretrained initialization")
+    saved_schema = None
+    if conditioning in ("mlp", "sequence"):
+        initial_info = torch.load(initial_ckpt, map_location="cpu", weights_only=False)
+        schema_key = "metadata_schema" if conditioning == "mlp" else "sequence_schema"
+        saved_schema = initial_info.get(schema_key)
+        if phase == 2 and saved_schema is None:
+            raise ValueError(f"{conditioning} phase 2 requires its phase 1 checkpoint with {schema_key}")
+        del initial_info
 
     # CLI overrides
     if n_epochs is not None:
@@ -503,15 +560,20 @@ def diff_model_train_mrclip(
                     f_csv.write("epoch,iter,global_step,loss_total,loss_flow,loss_clip,lr\n")
             logger.info(f"CSV logging to: {csv_log}")
 
-    # Load embeddings pkl
-    emb_store = EmbeddingStore(embeddings_pkl)
-
-    # Build DataLoader
+    # Fit metadata vocabulary/statistics before distributed partitioning, using
+    # only training indices. Restore the original schema for phase 2.
     train_items = load_filenames_and_indices(data_json)
+    if not train_items:
+        raise ValueError("Empty training split")
+    emb_store = EmbeddingStore(embeddings_pkl, conditioning=conditioning,
+                               train_indices=[int(item["idx"]) for item in train_items],
+                               metadata_schema=saved_schema if conditioning == "mlp" else None,
+                               sequence_schema=saved_schema if conditioning == "sequence" else None)
+    data_digest = hashlib.sha256(json.dumps(train_items, sort_keys=True).encode()).hexdigest()
     if dist.is_initialized():
         train_items = partition_dataset(
             data=train_items, shuffle=True,
-            num_partitions=dist.get_world_size(), even_divisible=True
+            num_partitions=dist.get_world_size(), even_divisible=True, seed=seed,
         )[local_rank]
 
     train_loader = prepare_data_mrclip(
@@ -527,8 +589,10 @@ def diff_model_train_mrclip(
     model = load_wrapped_unet(
         args, device, logger,
         phase=phase,
-        existing_ckpt=existing_ckpt or getattr(args, "existing_ckpt_filepath", None),
+        existing_ckpt=initial_ckpt,
         clip_dropout=clip_dropout,
+        clip_embed_dim=emb_store.embeddings.shape[1],
+        conditioning=conditioning,
     )
     noise_scheduler = define_instance(args, "noise_scheduler")
 
@@ -558,6 +622,9 @@ def diff_model_train_mrclip(
             logger.warning("--use-mr-clip-loss enabled but --clip-checkpoint not provided!")
 
     # Scale factor
+    # Reset after model initialization: different input dimensions consume a
+    # different number of RNG draws, but data order/noise must remain matched.
+    monai.utils.set_determinism(seed=seed + local_rank)
     check = first(train_loader)
     scale_factor = 1.0 / torch.std(check["image"].to(device))
     if dist.is_initialized():
@@ -588,10 +655,31 @@ def diff_model_train_mrclip(
         optimizer, total_iters=int(total_steps), power=2.0
     )
     loss_fn = torch.nn.L1Loss()
-    scaler = GradScaler("cuda")
+    scaler = GradScaler("cuda", enabled=amp)
 
-    suffix = f"_phase{phase}{ckpt_suffix}"
+    conditioning_tag = "" if conditioning == "mrclip" else f"_{conditioning}"
+    suffix = f"_phase{phase}{conditioning_tag}{ckpt_suffix}"
     ckpt_name = args.model_filename.replace(".pt", f"{suffix}.pt")
+    conditioning_info = {
+        "conditioning": conditioning,
+        "conditioning_dim": emb_store.embeddings.shape[1],
+        "metadata_schema": emb_store.metadata_schema,
+        "sequence_schema": emb_store.sequence_schema,
+        "training_config": {
+            "seed": seed, "phase": phase, "initial_checkpoint": initial_ckpt,
+            "data_json": data_json, "training_split_sha256": data_digest,
+            "embeddings_pkl": embeddings_pkl, "epochs": args.diffusion_unet_train["n_epochs"],
+            "lr": args.diffusion_unet_train["lr"], "proj_lr": proj_lr,
+            "batch_size": args.diffusion_unet_train["batch_size"],
+            "clip_dropout": clip_dropout, "mr_clip_loss": use_mr_clip_loss,
+            "trainable_parameters": sum(p.numel() for p in model.parameters() if p.requires_grad),
+        },
+    }
+    if local_rank == 0:
+        logger.info(f"Conditioning: {conditioning}, input dim: {emb_store.embeddings.shape[1]}")
+        logger.info(f"Checkpoint: {os.path.join(args.model_dir, ckpt_name)}")
+        with open(os.path.join(args.model_dir, ckpt_name + ".json"), "w") as f:
+            json.dump(conditioning_info, f, indent=2)
 
     global_step = 0
     for epoch in range(args.diffusion_unet_train["n_epochs"]):
@@ -618,6 +706,7 @@ def diff_model_train_mrclip(
                 epoch, model, avg, scale_factor,
                 args.model_dir, ckpt_name,
                 args.noise_scheduler["num_train_timesteps"],
+                conditioning_info=conditioning_info,
             )
 
     if tb_writer is not None:
@@ -640,7 +729,11 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--model-def", required=True,
                         help="Network definition config JSON")
     parser.add_argument("--embeddings-pkl", required=True,
-                        help="Path to mrclip_embeddings.pkl")
+                        help="MR-CLIP PKL; MLP uses its aligned texts, not its embedding values")
+    parser.add_argument("--conditioning", choices=["mrclip", "mlp", "sequence"], default="mrclip",
+                        help="sequence uses only coarse PKL 'sequences' labels")
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--model-dir", default=None, help="Override checkpoint directory")
     parser.add_argument("--data-json", required=True,
                         help="Path to dataset_mrclip.json")
     parser.add_argument("--phase", type=int, choices=[1, 2], default=1,
@@ -698,4 +791,7 @@ if __name__ == "__main__":
         clip_checkpoint=a.clip_checkpoint,
         open_clip_src=a.open_clip_src,
         clip_context_length=a.clip_context_length,
+        conditioning=a.conditioning,
+        seed=a.seed,
+        model_dir=a.model_dir,
     )

@@ -1,0 +1,228 @@
+=== Cross-tabulation (Scanner x Modality) ===
+modality                  FLAIR  PDW  T1W  T2W
+scanner                                       
+GE, DISCOVERY_MR450, 1.5      0    4    3    1
+GE, DISCOVERY_MR750, 3        5    2    1    3
+GE, SIGNA_HDx, 1.5            6   11   10    9
+GE, SIGNA_HDx, 3              0    0    0    1
+GE, Signa_HDxt, 1.5           8   12   14   13
+Siemens, Aera, 1.5           14    5    9   10
+Siemens, Avanto, 1.5         11   13    8   11
+Siemens, Symphony, 1.5        7    4    1    4
+
+
+--- Scanner: GE, DISCOVERY_MR450, 1.5 ---
+  [T1W] Case #124 (Row 1431) -> output/systematic_evaluation_30casesnew2/case_124_row1431_T1W_comparison.png
+  [PDW] Case #134 (Row 537) -> output/systematic_evaluation_30casesnew2/case_134_row537_PDW_comparison.png
+  [PDW] Case #154 (Row 331) -> output/systematic_evaluation_30casesnew2/case_154_row331_PDW_comparison.png
+  [T2W] Case #169 (Row 123) -> output/systematic_evaluation_30casesnew2/case_169_row123_T2W_comparison.png
+  [T1W] Case #172 (Row 1194) -> output/systematic_evaluation_30casesnew2/case_172_row1194_T1W_comparison.png
+  [PDW] Case #192 (Row 1779) -> output/systematic_evaluation_30casesnew2/case_192_row1779_PDW_comparison.png
+  [PDW] Case #198 (Row 267) -> output/systematic_evaluation_30casesnew2/case_198_row267_PDW_comparison.png
+  [T1W] Case #60 (Row 1879) -> output/systematic_evaluation_30casesnew2/case_60_row1879_T1W_comparison.png
+
+--- Scanner: GE, DISCOVERY_MR750, 3 ---
+  [FLAIR] Case #03 (Row 72) -> output/systematic_evaluation_30casesnew2/case_03_row72_FLAIR_comparison.png
+  [PDW] Case #06 (Row 521) -> output/systematic_evaluation_30casesnew2/case_06_row521_PDW_comparison.png
+  [T2W] Case #113 (Row 1970) -> output/systematic_evaluation_30casesnew2/case_113_row1970_T2W_comparison.png
+  [FLAIR] Case #15 (Row 882) -> output/systematic_evaluation_30casesnew2/case_15_row882_FLAIR_comparison.png
+  [PDW] Case #166 (Row 1629) -> output/systematic_evaluation_30casesnew2/case_166_row1629_PDW_comparison.png
+  [T2W] Case #194 (Row 1086) -> output/systematic_evaluation_30casesnew2/case_194_row1086_T2W_comparison.png
+  [FLAIR] Case #199 (Row 1971) -> output/systematic_evaluation_30casesnew2/case_199_row1971_FLAIR_comparison.png
+  [T2W] Case #200 (Row 1371) -> output/systematic_evaluation_30casesnew2/case_200_row1371_T2W_comparison.png
+  [FLAIR] Case #31 (Row 938) -> output/systematic_evaluation_30casesnew2/case_31_row938_FLAIR_comparison.png
+  [T1W] Case #64 (Row 1044) -> output/systematic_evaluation_30casesnew2/case_64_row1044_T1W_comparison.png
+  [FLAIR] Case #67 (Row 599) -> output/systematic_evaluation_30casesnew2/case_67_row599_FLAIR_comparison.png
+
+--- Scanner: GE, SIGNA_HDx, 1.5 ---
+  [T1W] Case #104 (Row 1876) -> output/systematic_evaluation_30casesnew2/case_104_row1876_T1W_comparison.png
+  [PDW] Case #110 (Row 1065) -> output/systematic_evaluation_30casesnew2/case_110_row1065_PDW_comparison.png
+  [T2W] Case #117 (Row 468) -> output/systematic_evaluation_30casesnew2/case_117_row468_T2W_comparison.png
+  [FLAIR] Case #11 (Row 1810) -> output/systematic_evaluation_30casesnew2/case_11_row1810_FLAIR_comparison.png
+  [T2W] Case #121 (Row 486) -> output/systematic_evaluation_30casesnew2/case_121_row486_T2W_comparison.png
+  [FLAIR] Case #123 (Row 91) -> output/systematic_evaluation_30casesnew2/case_123_row91_FLAIR_comparison.png
+  [T2W] Case #125 (Row 849) -> output/systematic_evaluation_30casesnew2/case_125_row849_T2W_comparison.png
+  [PDW] Case #126 (Row 665) -> output/systematic_evaluation_30casesnew2/case_126_row665_PDW_comparison.png
+  [PDW] Case #138 (Row 1503) -> output/systematic_evaluation_30casesnew2/case_138_row1503_PDW_comparison.png
+  [FLAIR] Case #139 (Row 1027) -> output/systematic_evaluation_30casesnew2/case_139_row1027_FLAIR_comparison.png
+  [T1W] Case #140 (Row 327) -> output/systematic_evaluation_30casesnew2/case_140_row327_T1W_comparison.png
+  [PDW] Case #162 (Row 371) -> output/systematic_evaluation_30casesnew2/case_162_row371_PDW_comparison.png
+  [T1W] Case #168 (Row 1426) -> output/systematic_evaluation_30casesnew2/case_168_row1426_T1W_comparison.png
+  [T1W] Case #16 (Row 185) -> output/systematic_evaluation_30casesnew2/case_16_row185_T1W_comparison.png
+  [FLAIR] Case #175 (Row 1232) -> output/systematic_evaluation_30casesnew2/case_175_row1232_FLAIR_comparison.png
+  [PDW] Case #182 (Row 1541) -> output/systematic_evaluation_30casesnew2/case_182_row1541_PDW_comparison.png
+  [PDW] Case #186 (Row 1037) -> output/systematic_evaluation_30casesnew2/case_186_row1037_PDW_comparison.png
+  [T2W] Case #191 (Row 1907) -> output/systematic_evaluation_30casesnew2/case_191_row1907_T2W_comparison.png
+  [T2W] Case #21 (Row 1043) -> output/systematic_evaluation_30casesnew2/case_21_row1043_T2W_comparison.png
+  [T1W] Case #24 (Row 1834) -> output/systematic_evaluation_30casesnew2/case_24_row1834_T1W_comparison.png
+  [PDW] Case #34 (Row 1816) -> output/systematic_evaluation_30casesnew2/case_34_row1816_PDW_comparison.png
+  [T1W] Case #44 (Row 1000) -> output/systematic_evaluation_30casesnew2/case_44_row1000_T1W_comparison.png
+  [T1W] Case #48 (Row 560) -> output/systematic_evaluation_30casesnew2/case_48_row560_T1W_comparison.png
+  [T2W] Case #49 (Row 186) -> output/systematic_evaluation_30casesnew2/case_49_row186_T2W_comparison.png
+  [PDW] Case #50 (Row 859) -> output/systematic_evaluation_30casesnew2/case_50_row859_PDW_comparison.png
+  [FLAIR] Case #59 (Row 1547) -> output/systematic_evaluation_30casesnew2/case_59_row1547_FLAIR_comparison.png
+  [T2W] Case #61 (Row 1122) -> output/systematic_evaluation_30casesnew2/case_61_row1122_T2W_comparison.png
+  [PDW] Case #66 (Row 1233) -> output/systematic_evaluation_30casesnew2/case_66_row1233_PDW_comparison.png
+  [T1W] Case #72 (Row 1932) -> output/systematic_evaluation_30casesnew2/case_72_row1932_T1W_comparison.png
+  [T1W] Case #76 (Row 1590) -> output/systematic_evaluation_30casesnew2/case_76_row1590_T1W_comparison.png
+  [T1W] Case #84 (Row 619) -> output/systematic_evaluation_30casesnew2/case_84_row619_T1W_comparison.png
+  [PDW] Case #86 (Row 240) -> output/systematic_evaluation_30casesnew2/case_86_row240_PDW_comparison.png
+  [FLAIR] Case #87 (Row 822) -> output/systematic_evaluation_30casesnew2/case_87_row822_FLAIR_comparison.png
+  [PDW] Case #90 (Row 1449) -> output/systematic_evaluation_30casesnew2/case_90_row1449_PDW_comparison.png
+  [T2W] Case #93 (Row 341) -> output/systematic_evaluation_30casesnew2/case_93_row341_T2W_comparison.png
+  [T2W] Case #97 (Row 1427) -> output/systematic_evaluation_30casesnew2/case_97_row1427_T2W_comparison.png
+
+--- Scanner: GE, SIGNA_HDx, 3 ---
+  [T2W] Case #165 (Row 1719) -> output/systematic_evaluation_30casesnew2/case_165_row1719_T2W_comparison.png
+
+--- Scanner: GE, Signa_HDxt, 1.5 ---
+  [T2W] Case #01 (Row 1325) -> output/systematic_evaluation_30casesnew2/case_01_row1325_T2W_comparison.png
+  [PDW] Case #02 (Row 252) -> output/systematic_evaluation_30casesnew2/case_02_row252_PDW_comparison.png
+  [T1W] Case #04 (Row 989) -> output/systematic_evaluation_30casesnew2/case_04_row989_T1W_comparison.png
+  [T1W] Case #08 (Row 337) -> output/systematic_evaluation_30casesnew2/case_08_row337_T1W_comparison.png
+  [T2W] Case #101 (Row 1379) -> output/systematic_evaluation_30casesnew2/case_101_row1379_T2W_comparison.png
+  [FLAIR] Case #103 (Row 1282) -> output/systematic_evaluation_30casesnew2/case_103_row1282_FLAIR_comparison.png
+  [T2W] Case #109 (Row 345) -> output/systematic_evaluation_30casesnew2/case_109_row345_T2W_comparison.png
+  [PDW] Case #10 (Row 1620) -> output/systematic_evaluation_30casesnew2/case_10_row1620_PDW_comparison.png
+  [FLAIR] Case #111 (Row 832) -> output/systematic_evaluation_30casesnew2/case_111_row832_FLAIR_comparison.png
+  [PDW] Case #114 (Row 1478) -> output/systematic_evaluation_30casesnew2/case_114_row1478_PDW_comparison.png
+  [FLAIR] Case #119 (Row 699) -> output/systematic_evaluation_30casesnew2/case_119_row699_FLAIR_comparison.png
+  [T1W] Case #128 (Row 428) -> output/systematic_evaluation_30casesnew2/case_128_row428_T1W_comparison.png
+  [FLAIR] Case #131 (Row 1897) -> output/systematic_evaluation_30casesnew2/case_131_row1897_FLAIR_comparison.png
+  [T2W] Case #149 (Row 917) -> output/systematic_evaluation_30casesnew2/case_149_row917_T2W_comparison.png
+  [PDW] Case #14 (Row 1302) -> output/systematic_evaluation_30casesnew2/case_14_row1302_PDW_comparison.png
+  [T1W] Case #152 (Row 1335) -> output/systematic_evaluation_30casesnew2/case_152_row1335_T1W_comparison.png
+  [T2W] Case #153 (Row 469) -> output/systematic_evaluation_30casesnew2/case_153_row469_T2W_comparison.png
+  [T1W] Case #156 (Row 1607) -> output/systematic_evaluation_30casesnew2/case_156_row1607_T1W_comparison.png
+  [T2W] Case #161 (Row 232) -> output/systematic_evaluation_30casesnew2/case_161_row232_T2W_comparison.png
+  [T1W] Case #164 (Row 253) -> output/systematic_evaluation_30casesnew2/case_164_row253_T1W_comparison.png
+  [T2W] Case #173 (Row 1145) -> output/systematic_evaluation_30casesnew2/case_173_row1145_T2W_comparison.png
+  [T1W] Case #176 (Row 60) -> output/systematic_evaluation_30casesnew2/case_176_row60_T1W_comparison.png
+  [PDW] Case #178 (Row 1772) -> output/systematic_evaluation_30casesnew2/case_178_row1772_PDW_comparison.png
+  [T1W] Case #184 (Row 507) -> output/systematic_evaluation_30casesnew2/case_184_row507_T1W_comparison.png
+  [FLAIR] Case #196 (Row 413) -> output/systematic_evaluation_30casesnew2/case_196_row413_FLAIR_comparison.png
+  [FLAIR] Case #27 (Row 1326) -> output/systematic_evaluation_30casesnew2/case_27_row1326_FLAIR_comparison.png
+  [T1W] Case #28 (Row 1819) -> output/systematic_evaluation_30casesnew2/case_28_row1819_T1W_comparison.png
+  [T2W] Case #29 (Row 865) -> output/systematic_evaluation_30casesnew2/case_29_row865_T2W_comparison.png
+  [PDW] Case #30 (Row 519) -> output/systematic_evaluation_30casesnew2/case_30_row519_PDW_comparison.png
+  [T2W] Case #33 (Row 576) -> output/systematic_evaluation_30casesnew2/case_33_row576_T2W_comparison.png
+  [FLAIR] Case #35 (Row 1791) -> output/systematic_evaluation_30casesnew2/case_35_row1791_FLAIR_comparison.png
+  [T1W] Case #36 (Row 43) -> output/systematic_evaluation_30casesnew2/case_36_row43_T1W_comparison.png
+  [PDW] Case #38 (Row 1812) -> output/systematic_evaluation_30casesnew2/case_38_row1812_PDW_comparison.png
+  [PDW] Case #46 (Row 1731) -> output/systematic_evaluation_30casesnew2/case_46_row1731_PDW_comparison.png
+  [T2W] Case #53 (Row 1781) -> output/systematic_evaluation_30casesnew2/case_53_row1781_T2W_comparison.png
+  [PDW] Case #62 (Row 287) -> output/systematic_evaluation_30casesnew2/case_62_row287_PDW_comparison.png
+  [T2W] Case #65 (Row 155) -> output/systematic_evaluation_30casesnew2/case_65_row155_T2W_comparison.png
+  [T1W] Case #68 (Row 1689) -> output/systematic_evaluation_30casesnew2/case_68_row1689_T1W_comparison.png
+  [T2W] Case #69 (Row 1328) -> output/systematic_evaluation_30casesnew2/case_69_row1328_T2W_comparison.png
+  [PDW] Case #70 (Row 1393) -> output/systematic_evaluation_30casesnew2/case_70_row1393_PDW_comparison.png
+  [FLAIR] Case #75 (Row 414) -> output/systematic_evaluation_30casesnew2/case_75_row414_FLAIR_comparison.png
+  [T1W] Case #80 (Row 615) -> output/systematic_evaluation_30casesnew2/case_80_row615_T1W_comparison.png
+  [PDW] Case #82 (Row 685) -> output/systematic_evaluation_30casesnew2/case_82_row685_PDW_comparison.png
+  [T2W] Case #85 (Row 1841) -> output/systematic_evaluation_30casesnew2/case_85_row1841_T2W_comparison.png
+  [T1W] Case #88 (Row 786) -> output/systematic_evaluation_30casesnew2/case_88_row786_T1W_comparison.png
+  [T1W] Case #92 (Row 1295) -> output/systematic_evaluation_30casesnew2/case_92_row1295_T1W_comparison.png
+  [PDW] Case #94 (Row 869) -> output/systematic_evaluation_30casesnew2/case_94_row869_PDW_comparison.png
+
+--- Scanner: Siemens, Aera, 1.5 ---
+  [T2W] Case #05 (Row 496) -> output/systematic_evaluation_30casesnew2/case_05_row496_T2W_comparison.png
+  [T2W] Case #105 (Row 360) -> output/systematic_evaluation_30casesnew2/case_105_row360_T2W_comparison.png
+  [FLAIR] Case #107 (Row 1571) -> output/systematic_evaluation_30casesnew2/case_107_row1571_FLAIR_comparison.png
+  [T1W] Case #108 (Row 789) -> output/systematic_evaluation_30casesnew2/case_108_row789_T1W_comparison.png
+  [PDW] Case #118 (Row 1600) -> output/systematic_evaluation_30casesnew2/case_118_row1600_PDW_comparison.png
+  [T1W] Case #120 (Row 194) -> output/systematic_evaluation_30casesnew2/case_120_row194_T1W_comparison.png
+  [FLAIR] Case #127 (Row 153) -> output/systematic_evaluation_30casesnew2/case_127_row153_FLAIR_comparison.png
+  [T1W] Case #132 (Row 1509) -> output/systematic_evaluation_30casesnew2/case_132_row1509_T1W_comparison.png
+  [T2W] Case #133 (Row 672) -> output/systematic_evaluation_30casesnew2/case_133_row672_T2W_comparison.png
+  [T1W] Case #136 (Row 1389) -> output/systematic_evaluation_30casesnew2/case_136_row1389_T1W_comparison.png
+  [T2W] Case #13 (Row 171) -> output/systematic_evaluation_30casesnew2/case_13_row171_T2W_comparison.png
+  [FLAIR] Case #143 (Row 528) -> output/systematic_evaluation_30casesnew2/case_143_row528_FLAIR_comparison.png
+  [T1W] Case #144 (Row 1492) -> output/systematic_evaluation_30casesnew2/case_144_row1492_T1W_comparison.png
+  [T2W] Case #145 (Row 1155) -> output/systematic_evaluation_30casesnew2/case_145_row1155_T2W_comparison.png
+  [T1W] Case #148 (Row 1608) -> output/systematic_evaluation_30casesnew2/case_148_row1608_T1W_comparison.png
+  [PDW] Case #170 (Row 937) -> output/systematic_evaluation_30casesnew2/case_170_row937_PDW_comparison.png
+  [FLAIR] Case #171 (Row 863) -> output/systematic_evaluation_30casesnew2/case_171_row863_FLAIR_comparison.png
+  [FLAIR] Case #179 (Row 265) -> output/systematic_evaluation_30casesnew2/case_179_row265_FLAIR_comparison.png
+  [T2W] Case #185 (Row 641) -> output/systematic_evaluation_30casesnew2/case_185_row641_T2W_comparison.png
+  [FLAIR] Case #187 (Row 374) -> output/systematic_evaluation_30casesnew2/case_187_row374_FLAIR_comparison.png
+  [FLAIR] Case #23 (Row 76) -> output/systematic_evaluation_30casesnew2/case_23_row76_FLAIR_comparison.png
+  [T2W] Case #37 (Row 1597) -> output/systematic_evaluation_30casesnew2/case_37_row1597_T2W_comparison.png
+  [FLAIR] Case #39 (Row 344) -> output/systematic_evaluation_30casesnew2/case_39_row344_FLAIR_comparison.png
+  [PDW] Case #42 (Row 660) -> output/systematic_evaluation_30casesnew2/case_42_row660_PDW_comparison.png
+  [FLAIR] Case #43 (Row 339) -> output/systematic_evaluation_30casesnew2/case_43_row339_FLAIR_comparison.png
+  [FLAIR] Case #51 (Row 205) -> output/systematic_evaluation_30casesnew2/case_51_row205_FLAIR_comparison.png
+  [T1W] Case #52 (Row 1461) -> output/systematic_evaluation_30casesnew2/case_52_row1461_T1W_comparison.png
+  [PDW] Case #54 (Row 793) -> output/systematic_evaluation_30casesnew2/case_54_row793_PDW_comparison.png
+  [T1W] Case #56 (Row 1303) -> output/systematic_evaluation_30casesnew2/case_56_row1303_T1W_comparison.png
+  [T2W] Case #57 (Row 1702) -> output/systematic_evaluation_30casesnew2/case_57_row1702_T2W_comparison.png
+  [FLAIR] Case #71 (Row 1857) -> output/systematic_evaluation_30casesnew2/case_71_row1857_FLAIR_comparison.png
+  [T2W] Case #77 (Row 139) -> output/systematic_evaluation_30casesnew2/case_77_row139_T2W_comparison.png
+  [PDW] Case #78 (Row 109) -> output/systematic_evaluation_30casesnew2/case_78_row109_PDW_comparison.png
+  [FLAIR] Case #83 (Row 169) -> output/systematic_evaluation_30casesnew2/case_83_row169_FLAIR_comparison.png
+  [T2W] Case #89 (Row 952) -> output/systematic_evaluation_30casesnew2/case_89_row952_T2W_comparison.png
+  [FLAIR] Case #95 (Row 755) -> output/systematic_evaluation_30casesnew2/case_95_row755_FLAIR_comparison.png
+  [T1W] Case #96 (Row 611) -> output/systematic_evaluation_30casesnew2/case_96_row611_T1W_comparison.png
+  [FLAIR] Case #99 (Row 1510) -> output/systematic_evaluation_30casesnew2/case_99_row1510_FLAIR_comparison.png
+
+--- Scanner: Siemens, Avanto, 1.5 ---
+  [T1W] Case #100 (Row 1965) -> output/systematic_evaluation_30casesnew2/case_100_row1965_T1W_comparison.png
+  [PDW] Case #102 (Row 180) -> output/systematic_evaluation_30casesnew2/case_102_row180_PDW_comparison.png
+  [PDW] Case #106 (Row 1220) -> output/systematic_evaluation_30casesnew2/case_106_row1220_PDW_comparison.png
+  [T1W] Case #112 (Row 1278) -> output/systematic_evaluation_30casesnew2/case_112_row1278_T1W_comparison.png
+  [FLAIR] Case #115 (Row 1495) -> output/systematic_evaluation_30casesnew2/case_115_row1495_FLAIR_comparison.png
+  [T1W] Case #116 (Row 1678) -> output/systematic_evaluation_30casesnew2/case_116_row1678_T1W_comparison.png
+  [PDW] Case #122 (Row 1954) -> output/systematic_evaluation_30casesnew2/case_122_row1954_PDW_comparison.png
+  [T2W] Case #129 (Row 1952) -> output/systematic_evaluation_30casesnew2/case_129_row1952_T2W_comparison.png
+  [T1W] Case #12 (Row 1663) -> output/systematic_evaluation_30casesnew2/case_12_row1663_T1W_comparison.png
+  [PDW] Case #130 (Row 1334) -> output/systematic_evaluation_30casesnew2/case_130_row1334_PDW_comparison.png
+  [FLAIR] Case #135 (Row 1435) -> output/systematic_evaluation_30casesnew2/case_135_row1435_FLAIR_comparison.png
+  [T2W] Case #137 (Row 841) -> output/systematic_evaluation_30casesnew2/case_137_row841_T2W_comparison.png
+  [PDW] Case #142 (Row 335) -> output/systematic_evaluation_30casesnew2/case_142_row335_PDW_comparison.png
+  [FLAIR] Case #147 (Row 1644) -> output/systematic_evaluation_30casesnew2/case_147_row1644_FLAIR_comparison.png
+  [PDW] Case #150 (Row 1375) -> output/systematic_evaluation_30casesnew2/case_150_row1375_PDW_comparison.png
+  [FLAIR] Case #151 (Row 896) -> output/systematic_evaluation_30casesnew2/case_151_row896_FLAIR_comparison.png
+  [T2W] Case #157 (Row 191) -> output/systematic_evaluation_30casesnew2/case_157_row191_T2W_comparison.png
+  [FLAIR] Case #159 (Row 125) -> output/systematic_evaluation_30casesnew2/case_159_row125_FLAIR_comparison.png
+  [T1W] Case #160 (Row 1459) -> output/systematic_evaluation_30casesnew2/case_160_row1459_T1W_comparison.png
+  [FLAIR] Case #163 (Row 1377) -> output/systematic_evaluation_30casesnew2/case_163_row1377_FLAIR_comparison.png
+  [T2W] Case #17 (Row 55) -> output/systematic_evaluation_30casesnew2/case_17_row55_T2W_comparison.png
+  [T1W] Case #180 (Row 621) -> output/systematic_evaluation_30casesnew2/case_180_row621_T1W_comparison.png
+  [T2W] Case #181 (Row 1675) -> output/systematic_evaluation_30casesnew2/case_181_row1675_T2W_comparison.png
+  [T2W] Case #188 (Row 987) -> output/systematic_evaluation_30casesnew2/case_188_row987_T2W_comparison.png
+  [PDW] Case #189 (Row 4) -> output/systematic_evaluation_30casesnew2/case_189_row4_PDW_comparison.png
+  [PDW] Case #18 (Row 215) -> output/systematic_evaluation_30casesnew2/case_18_row215_PDW_comparison.png
+  [FLAIR] Case #190 (Row 1635) -> output/systematic_evaluation_30casesnew2/case_190_row1635_FLAIR_comparison.png
+  [FLAIR] Case #193 (Row 570) -> output/systematic_evaluation_30casesnew2/case_193_row570_FLAIR_comparison.png
+  [PDW] Case #195 (Row 1893) -> output/systematic_evaluation_30casesnew2/case_195_row1893_PDW_comparison.png
+  [T2W] Case #197 (Row 1104) -> output/systematic_evaluation_30casesnew2/case_197_row1104_T2W_comparison.png
+  [FLAIR] Case #19 (Row 444) -> output/systematic_evaluation_30casesnew2/case_19_row444_FLAIR_comparison.png
+  [T1W] Case #20 (Row 866) -> output/systematic_evaluation_30casesnew2/case_20_row866_T1W_comparison.png
+  [PDW] Case #22 (Row 1338) -> output/systematic_evaluation_30casesnew2/case_22_row1338_PDW_comparison.png
+  [T1W] Case #32 (Row 1953) -> output/systematic_evaluation_30casesnew2/case_32_row1953_T1W_comparison.png
+  [T2W] Case #41 (Row 709) -> output/systematic_evaluation_30casesnew2/case_41_row709_T2W_comparison.png
+  [T2W] Case #45 (Row 2005) -> output/systematic_evaluation_30casesnew2/case_45_row2005_T2W_comparison.png
+  [FLAIR] Case #47 (Row 708) -> output/systematic_evaluation_30casesnew2/case_47_row708_FLAIR_comparison.png
+  [PDW] Case #58 (Row 93) -> output/systematic_evaluation_30casesnew2/case_58_row93_PDW_comparison.png
+  [T2W] Case #73 (Row 757) -> output/systematic_evaluation_30casesnew2/case_73_row757_T2W_comparison.png
+  [PDW] Case #74 (Row 1316) -> output/systematic_evaluation_30casesnew2/case_74_row1316_PDW_comparison.png
+  [FLAIR] Case #79 (Row 1398) -> output/systematic_evaluation_30casesnew2/case_79_row1398_FLAIR_comparison.png
+  [T2W] Case #81 (Row 1645) -> output/systematic_evaluation_30casesnew2/case_81_row1645_T2W_comparison.png
+  [PDW] Case #98 (Row 655) -> output/systematic_evaluation_30casesnew2/case_98_row655_PDW_comparison.png
+
+--- Scanner: Siemens, Symphony, 1.5 ---
+  [FLAIR] Case #07 (Row 293) -> output/systematic_evaluation_30casesnew2/case_07_row293_FLAIR_comparison.png
+  [T2W] Case #09 (Row 1408) -> output/systematic_evaluation_30casesnew2/case_09_row1408_T2W_comparison.png
+  [T2W] Case #141 (Row 566) -> output/systematic_evaluation_30casesnew2/case_141_row566_T2W_comparison.png
+  [PDW] Case #146 (Row 662) -> output/systematic_evaluation_30casesnew2/case_146_row662_PDW_comparison.png
+  [FLAIR] Case #155 (Row 1137) -> output/systematic_evaluation_30casesnew2/case_155_row1137_FLAIR_comparison.png
+  [PDW] Case #158 (Row 1831) -> output/systematic_evaluation_30casesnew2/case_158_row1831_PDW_comparison.png
+  [FLAIR] Case #167 (Row 960) -> output/systematic_evaluation_30casesnew2/case_167_row960_FLAIR_comparison.png
+  [PDW] Case #174 (Row 648) -> output/systematic_evaluation_30casesnew2/case_174_row648_PDW_comparison.png
+  [T2W] Case #177 (Row 1480) -> output/systematic_evaluation_30casesnew2/case_177_row1480_T2W_comparison.png
+  [FLAIR] Case #183 (Row 751) -> output/systematic_evaluation_30casesnew2/case_183_row751_FLAIR_comparison.png
+  [T2W] Case #25 (Row 407) -> output/systematic_evaluation_30casesnew2/case_25_row407_T2W_comparison.png
+  [PDW] Case #26 (Row 1579) -> output/systematic_evaluation_30casesnew2/case_26_row1579_PDW_comparison.png
+  [T1W] Case #40 (Row 1573) -> output/systematic_evaluation_30casesnew2/case_40_row1573_T1W_comparison.png
+  [FLAIR] Case #55 (Row 1262) -> output/systematic_evaluation_30casesnew2/case_55_row1262_FLAIR_comparison.png
+  [FLAIR] Case #63 (Row 1923) -> output/systematic_evaluation_30casesnew2/case_63_row1923_FLAIR_comparison.png
+  [FLAIR] Case #91 (Row 1756) -> output/systematic_evaluation_30casesnew2/case_91_row1756_FLAIR_comparison.png

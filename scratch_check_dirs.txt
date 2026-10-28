@@ -1,0 +1,94 @@
+=== Pattern: output/systematic_evaluation_30casesnew* ===
+  output/systematic_evaluation_30casesnew (dir)
+    Contains 57 items. Samples: ['case_01_row1325_T2W_comparison.png', 'case_02_row252_PDW_comparison.png', 'case_03_row72_FLAIR_comparison.png', 'case_04_row989_T1W_comparison.png', 'case_05_row496_T2W_comparison.png', 'case_06_row521_PDW_comparison.png', 'case_07_row293_FLAIR_comparison.png', 'case_08_row337_T1W_comparison.png', 'case_09_row1408_T2W_comparison.png', 'case_10_row1620_PDW_comparison.png']
+  output/systematic_evaluation_30casesnew2 (dir)
+    Contains 207 items. Samples: ['case_01_row1325_T2W_comparison.png', 'case_02_row252_PDW_comparison.png', 'case_03_row72_FLAIR_comparison.png', 'case_04_row989_T1W_comparison.png', 'case_05_row496_T2W_comparison.png', 'case_06_row521_PDW_comparison.png', 'case_07_row293_FLAIR_comparison.png', 'case_08_row337_T1W_comparison.png', 'case_09_row1408_T2W_comparison.png', 'case_100_row1965_T1W_comparison.png']
+=== Pattern: output/systematic_evaluation* ===
+  output/systematic_evaluation (dir)
+    Contains 16 items. Samples: ['case_01_row495_T2W_comparison.png', 'case_02_row62_PDW_comparison.png', 'case_03_row2475_T2STARW_comparison.png', 'case_04_row997_T1W_comparison.png', 'case_05_row998_FLAIR_comparison.png', 'case_06_row1005_T2W_comparison.png', 'case_07_row391_PDW_comparison.png', 'case_08_row2486_T2STARW_comparison.png', 'case_09_row405_T1W_comparison.png', 'case_10_row2200_FLAIR_comparison.png']
+  output/systematic_evaluation_30cases (dir)
+    Contains 308 items. Samples: ['case_01_row495_T2W_comparison.png', 'case_02_row62_PDW_comparison.png', 'case_03_row2475_T2STARW_comparison.png', 'case_04_row997_T1W_comparison.png', 'case_05_row998_FLAIR_comparison.png', 'case_06_row1005_T2W_comparison.png', 'case_07_row391_PDW_comparison.png', 'case_08_row2486_T2STARW_comparison.png', 'case_09_row405_T1W_comparison.png', 'case_100_row1133_FLAIR_comparison.png']
+  output/systematic_evaluation_30cases_phase1 (dir)
+    Contains 36 items. Samples: ['case_01_row495_T2W_comparison.png', 'case_02_row62_PDW_comparison.png', 'case_03_row2475_T2STARW_comparison.png', 'case_04_row997_T1W_comparison.png', 'case_05_row998_FLAIR_comparison.png', 'case_06_row1005_T2W_comparison.png', 'case_07_row391_PDW_comparison.png', 'case_08_row2486_T2STARW_comparison.png', 'case_09_row405_T1W_comparison.png', 'case_10_row2200_FLAIR_comparison.png']
+  output/systematic_evaluation_mrrate (dir)
+    Contains 25 items. Samples: ['case_000_T1W_cfg_montage.png', 'case_001_T1W_cfg_montage.png', 'case_002_T1W_cfg_montage.png', 'case_003_T1W_cfg_montage.png', 'case_004_T1W_cfg_montage.png', 'case_005_T2W_cfg_montage.png', 'case_006_T2W_cfg_montage.png', 'case_007_T2W_cfg_montage.png', 'case_008_T2W_cfg_montage.png', 'case_009_T2W_cfg_montage.png']
+  output/systematic_evaluation_mrrate_test (dir)
+    Contains 0 items. Samples: []
+  output/systematic_evaluation_mrrate_p2 (dir)
+    Contains 106 items. Samples: ['case_000_T1W_cfg_montage.png', 'case_001_T1W_cfg_montage.png', 'case_002_T1W_cfg_montage.png', 'case_003_T1W_cfg_montage.png', 'case_004_T1W_cfg_montage.png', 'case_005_T1W_cfg_montage.png', 'case_006_T1W_cfg_montage.png', 'case_007_T1W_cfg_montage.png', 'case_008_T1W_cfg_montage.png', 'case_009_T1W_cfg_montage.png']
+  output/systematic_evaluation_mrrate_p22 (dir)
+    Contains 39 items. Samples: ['case_000_T1W_cfg_montage.png', 'case_001_T1W_cfg_montage.png', 'case_002_T1W_cfg_montage.png', 'case_003_T1W_cfg_montage.png', 'case_004_T1W_cfg_montage.png', 'case_005_T1W_cfg_montage.png', 'case_006_T1W_cfg_montage.png', 'case_007_T1W_cfg_montage.png', 'case_008_T1W_cfg_montage.png', 'case_009_T1W_cfg_montage.png']
+  output/systematic_evaluation_30casesnew (dir)
+    Contains 57 items. Samples: ['case_01_row1325_T2W_comparison.png', 'case_02_row252_PDW_comparison.png', 'case_03_row72_FLAIR_comparison.png', 'case_04_row989_T1W_comparison.png', 'case_05_row496_T2W_comparison.png', 'case_06_row521_PDW_comparison.png', 'case_07_row293_FLAIR_comparison.png', 'case_08_row337_T1W_comparison.png', 'case_09_row1408_T2W_comparison.png', 'case_10_row1620_PDW_comparison.png']
+  output/systematic_evaluation_30casesnew2 (dir)
+    Contains 207 items. Samples: ['case_01_row1325_T2W_comparison.png', 'case_02_row252_PDW_comparison.png', 'case_03_row72_FLAIR_comparison.png', 'case_04_row989_T1W_comparison.png', 'case_05_row496_T2W_comparison.png', 'case_06_row521_PDW_comparison.png', 'case_07_row293_FLAIR_comparison.png', 'case_08_row337_T1W_comparison.png', 'case_09_row1408_T2W_comparison.png', 'case_100_row1965_T1W_comparison.png']
+=== Pattern: /home/mav24/projects/NV-Generate-CTMR-A/output/* ===
+  /home/mav24/projects/NV-Generate-CTMR-A/output/unet_3d_seed1234_size256x256x128_spacing0.94x0.94x1.36_20260819113554_rank0_modality9.nii.gz (file)
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_t2 (dir)
+    Contains 3 items. Samples: ['mrclip_seed58677_size256x256x128_cfg2.0_20260820075919.nii.gz', 'mrclip_seed91215_size256x256x128_cfg2.0_20260820080022.nii.gz', 'mrclip_seed98985_size256x256x128_cfg2.0_20260820080046.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_t1 (dir)
+    Contains 3 items. Samples: ['mrclip_seed1021_size256x256x128_cfg2.0_20260820080253.nii.gz', 'mrclip_seed59057_size256x256x128_cfg2.0_20260820080407.nii.gz', 'mrclip_seed79762_size256x256x128_cfg2.0_20260820080418.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_flair (dir)
+    Contains 3 items. Samples: ['mrclip_seed1669_size256x256x128_cfg2.0_20260820080714.nii.gz', 'mrclip_seed17520_size256x256x128_cfg2.0_20260820080702.nii.gz', 'mrclip_seed34968_size256x256x128_cfg2.0_20260820080651.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_t1_2 (dir)
+    Contains 2 items. Samples: ['mrclip_seed21787_size256x256x128_cfg2.0_20260820083019.nii.gz', 'mrclip_seed4597_size256x256x128_cfg2.0_20260820083036.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_t1_3 (dir)
+    Contains 2 items. Samples: ['mrclip_seed34506_size256x256x128_cfg2.0_20260820084104.nii.gz', 'mrclip_seed52212_size256x256x128_cfg2.0_20260820084053.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_p1_t1 (dir)
+    Contains 3 items. Samples: ['mrclip_seed24158_size256x256x128_cfg2.0_20260821095052.nii.gz', 'mrclip_seed31522_size256x256x128_cfg2.0_20260821095008.nii.gz', 'mrclip_seed39706_size256x256x128_cfg2.0_20260821094932.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_p1_flair (dir)
+    Contains 2 items. Samples: ['mrclip_seed19793_size256x256x128_cfg2.0_20260821095208.nii.gz', 'mrclip_seed40383_size256x256x128_cfg10.0_20260821095416.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_p2_flair (dir)
+    Contains 4 items. Samples: ['mrclip_seed23892_size256x256x128_cfg10.0_20260822094740.nii.gz', 'mrclip_seed52552_size256x256x128_cfg2.0_20260822094821.nii.gz', 'mrclip_seed60415_size256x256x128_cfg0.0_20260822094834.nii.gz', 'mrclip_seed80595_size256x256x128_cfg5.0_20260822094759.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_p2_t2 (dir)
+    Contains 4 items. Samples: ['mrclip_seed16652_size256x256x128_cfg10.0_20260822095339.nii.gz', 'mrclip_seed57838_size256x256x128_cfg2.0_20260822095200.nii.gz', 'mrclip_seed85056_size256x256x128_cfg0.0_20260822095225.nii.gz', 'mrclip_seed94298_size256x256x128_cfg5.0_20260822095244.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/test_p2_t1 (dir)
+    Contains 1 items. Samples: ['mrclip_seed50758_size256x256x128_cfg2.0_20260822095912.nii.gz']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation (dir)
+    Contains 16 items. Samples: ['case_01_row495_T2W_comparison.png', 'case_02_row62_PDW_comparison.png', 'case_03_row2475_T2STARW_comparison.png', 'case_04_row997_T1W_comparison.png', 'case_05_row998_FLAIR_comparison.png', 'case_06_row1005_T2W_comparison.png', 'case_07_row391_PDW_comparison.png', 'case_08_row2486_T2STARW_comparison.png', 'case_09_row405_T1W_comparison.png', 'case_10_row2200_FLAIR_comparison.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_30cases (dir)
+    Contains 308 items. Samples: ['case_01_row495_T2W_comparison.png', 'case_02_row62_PDW_comparison.png', 'case_03_row2475_T2STARW_comparison.png', 'case_04_row997_T1W_comparison.png', 'case_05_row998_FLAIR_comparison.png', 'case_06_row1005_T2W_comparison.png', 'case_07_row391_PDW_comparison.png', 'case_08_row2486_T2STARW_comparison.png', 'case_09_row405_T1W_comparison.png', 'case_100_row1133_FLAIR_comparison.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/validation_experiments (dir)
+    Contains 6 items. Samples: ['exp1_physics_sweeps', 'exp2_multimodal_panel', 'exp3_hardware_field_strength', 'exp4_scanner_clustering_clean', 'exp4_scanner_clustering_old', 'exp4_scanner_clustering_works']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/validation_experiments_phase1 (dir)
+    Contains 4 items. Samples: ['exp1_physics_sweeps', 'exp2_multimodal_panel', 'exp3_hardware_field_strength', 'exp4_scanner_clustering']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_30cases_phase1 (dir)
+    Contains 36 items. Samples: ['case_01_row495_T2W_comparison.png', 'case_02_row62_PDW_comparison.png', 'case_03_row2475_T2STARW_comparison.png', 'case_04_row997_T1W_comparison.png', 'case_05_row998_FLAIR_comparison.png', 'case_06_row1005_T2W_comparison.png', 'case_07_row391_PDW_comparison.png', 'case_08_row2486_T2STARW_comparison.png', 'case_09_row405_T1W_comparison.png', 'case_10_row2200_FLAIR_comparison.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_mrrate (dir)
+    Contains 25 items. Samples: ['case_000_T1W_cfg_montage.png', 'case_001_T1W_cfg_montage.png', 'case_002_T1W_cfg_montage.png', 'case_003_T1W_cfg_montage.png', 'case_004_T1W_cfg_montage.png', 'case_005_T2W_cfg_montage.png', 'case_006_T2W_cfg_montage.png', 'case_007_T2W_cfg_montage.png', 'case_008_T2W_cfg_montage.png', 'case_009_T2W_cfg_montage.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_mrrate_test (dir)
+    Contains 0 items. Samples: []
+  /home/mav24/projects/NV-Generate-CTMR-A/output/validation_experiments_mr-rate-phase1 (dir)
+    Contains 4 items. Samples: ['exp1_physics_sweeps', 'exp2_multimodal_panel', 'exp3_hardware_field_strength', 'exp4_scanner_clustering']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/validation_experiments_mrrate_phase1_old (dir)
+    Contains 4 items. Samples: ['exp1_physics_sweeps', 'exp2_multimodal_panel', 'exp3_hardware_field_strength', 'exp4_scanner_clustering']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/validation_experiments_mrrate_p2 (dir)
+    Contains 4 items. Samples: ['exp1_physics_sweeps', 'exp2_multimodal_panel', 'exp3_hardware_field_strength', 'exp4_scanner_clustering']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_mrrate_p2 (dir)
+    Contains 106 items. Samples: ['case_000_T1W_cfg_montage.png', 'case_001_T1W_cfg_montage.png', 'case_002_T1W_cfg_montage.png', 'case_003_T1W_cfg_montage.png', 'case_004_T1W_cfg_montage.png', 'case_005_T1W_cfg_montage.png', 'case_006_T1W_cfg_montage.png', 'case_007_T1W_cfg_montage.png', 'case_008_T1W_cfg_montage.png', 'case_009_T1W_cfg_montage.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_mrrate_p22 (dir)
+    Contains 39 items. Samples: ['case_000_T1W_cfg_montage.png', 'case_001_T1W_cfg_montage.png', 'case_002_T1W_cfg_montage.png', 'case_003_T1W_cfg_montage.png', 'case_004_T1W_cfg_montage.png', 'case_005_T1W_cfg_montage.png', 'case_006_T1W_cfg_montage.png', 'case_007_T1W_cfg_montage.png', 'case_008_T1W_cfg_montage.png', 'case_009_T1W_cfg_montage.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_logs (dir)
+    Contains 14 items. Samples: ['eval_pipeline_20260909_172825.log', 'eval_pipeline_20260909_173037.log', 'eval_pipeline_20260910_074149.log', 'eval_pipeline_20260910_080801.log', 'eval_pipeline_20260910_090557.log', 'eval_pipeline_20260910_091329.log', 'eval_pipeline_20260910_092000.log', 'eval_pipeline_20260910_092806.log', 'rigorous_eval_pipeline_20260910_105343.log', 'rigorous_eval_pipeline_20260910_105711.log']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_physics (dir)
+    Contains 59 items. Samples: ['cache_dump.txt', 'cached_tr_1400.png', 'cached_tr_2200.png', 'cached_tr_3200.png', 'cached_tr_4500.png', 'cached_tr_6000.png', 'cached_tr_800.png', 'clean_te_100ms.png', 'clean_te_10ms.png', 'clean_te_20ms.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_hardware (dir)
+    Contains 9 items. Samples: ['field_strength_snr_cnr_comparison.png', 'field_strength_snr_cnr_comparison_flair.png', 'field_strength_snr_cnr_comparison_t1w.png', 'field_strength_snr_cnr_comparison_t2w.png', 'hardware_disentanglement_metrics.csv', 'vendor_invariance_panel.png', 'vendor_invariance_panel_flair.png', 'vendor_invariance_panel_t1w.png', 'vendor_invariance_panel_t2w.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_quality (dir)
+    Contains 5 items. Samples: ['LEGACY_DO_NOT_USE_inception_fid.json', 'mrclip_fid_summary.json', 'mrclip_fid_with_bootstrapping.png', 'quality_metrics_distribution.png', 'real_vs_synthetic_slice_gallery.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_memorization (dir)
+    Contains 4 items. Samples: ['intra_prompt_diversity_panel.png', 'memorization_audit_metrics.csv', 'nearest_neighbor_distribution.png', 'top_nn_visual_montage.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_controllability (dir)
+    Contains 4 items. Samples: ['categorical_controllability.png', 'controllability_metrics.json', 'controllability_per_case.csv', 'requested_vs_predicted_grid.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_controllability_test (dir)
+    Contains 0 items. Samples: []
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_disentanglement (dir)
+    Contains 3 items. Samples: ['disentanglement_evaluation.png', 'disentanglement_per_seed.csv', 'disentanglement_summary.json']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_ablation (dir)
+    Contains 5 items. Samples: ['ablation_comparison_summary.png', 'ablation_metrics_all.json', 'model_mrclip', 'model_none', 'model_raw_metadata']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/eval_physics_joint (dir)
+    Contains 9 items. Samples: ['level_a_te_sweep.png', 'level_a_ti_sweep.png', 'level_a_tr_sweep.png', 'level_b1_tr_te_heatmap.png', 'level_b2_tr_ti_heatmap.png', 'level_c_3d_sweep.csv', 'level_c_param_coverage.png', 'level_c_summary.png', 'physics_joint_summary.json']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_30casesnew (dir)
+    Contains 57 items. Samples: ['case_01_row1325_T2W_comparison.png', 'case_02_row252_PDW_comparison.png', 'case_03_row72_FLAIR_comparison.png', 'case_04_row989_T1W_comparison.png', 'case_05_row496_T2W_comparison.png', 'case_06_row521_PDW_comparison.png', 'case_07_row293_FLAIR_comparison.png', 'case_08_row337_T1W_comparison.png', 'case_09_row1408_T2W_comparison.png', 'case_10_row1620_PDW_comparison.png']
+  /home/mav24/projects/NV-Generate-CTMR-A/output/systematic_evaluation_30casesnew2 (dir)
+    Contains 207 items. Samples: ['case_01_row1325_T2W_comparison.png', 'case_02_row252_PDW_comparison.png', 'case_03_row72_FLAIR_comparison.png', 'case_04_row989_T1W_comparison.png', 'case_05_row496_T2W_comparison.png', 'case_06_row521_PDW_comparison.png', 'case_07_row293_FLAIR_comparison.png', 'case_08_row337_T1W_comparison.png', 'case_09_row1408_T2W_comparison.png', 'case_100_row1965_T1W_comparison.png']

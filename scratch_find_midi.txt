@@ -1,0 +1,2 @@
+MIDI dirs found:
+  /data/mr_niftis/nfs/home/mavci/MR/midi

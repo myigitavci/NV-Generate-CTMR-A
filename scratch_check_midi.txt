@@ -1,0 +1,8 @@
+Exists: True
+Contents: ['rawdata']
+Total nii count in midi: 35277
+  /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0000245e6b55e77014663faa75554a/ses-20140626185354/anat/ur_sub-0000245e6b55e77014663faa75554a_ses-20140626185354_run-6_T2w.nii
+  /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0000245e6b55e77014663faa75554a/ses-20140626190520/anat/ur_sub-0000245e6b55e77014663faa75554a_ses-20140626190520_run-3_PDw.nii
+  /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0000245e6b55e77014663faa75554a/ses-20140626190520/anat/ur_sub-0000245e6b55e77014663faa75554a_ses-20140626190520_run-3_T2w.nii
+  /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0000245e6b55e77014663faa75554a/ses-20170306132842/anat/ur_sub-0000245e6b55e77014663faa75554a_ses-20170306132842_run-7_FLAIR.nii
+  /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0000245e6b55e77014663faa75554a/ses-20171106142331/anat/ur_sub-0000245e6b55e77014663faa75554a_ses-20171106142331_run-2_PDw.nii

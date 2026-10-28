@@ -37,6 +37,7 @@ from tqdm import tqdm
 
 from .diff_model_setting import initialize_distributed, load_config, setup_logging
 from .mrclip_conditioned_unet import MRCLIPConditionedUNet
+from .metadata_conditioning import MetadataEncoder, SequenceLabelEncoder
 from .sample import ReconModel
 from .utils import define_instance, dynamic_infer
 
@@ -92,10 +93,11 @@ def load_models_mrclip(args, device, logger, mrclip_ckpt_path: str):
     autoencoder.load_state_dict(ae_ckpt)
     logger.info(f"Autoencoder loaded from {args.trained_autoencoder_path}")
 
-    base_unet = define_instance(args, "diffusion_unet_def").to(device)
-    model = MRCLIPConditionedUNet(unet=base_unet).to(device)
-
     ckpt = torch.load(mrclip_ckpt_path, map_location=device, weights_only=False)
+    base_unet = define_instance(args, "diffusion_unet_def").to(device)
+    model = MRCLIPConditionedUNet(
+        unet=base_unet, clip_embed_dim=ckpt.get("conditioning_dim", 512),
+    ).to(device)
     state = ckpt.get("model_state_dict", ckpt.get("unet_state_dict", ckpt))
     cleaned_state = {}
     for k, v in state.items():
@@ -104,7 +106,7 @@ def load_models_mrclip(args, device, logger, mrclip_ckpt_path: str):
 
     has_wrapper_keys = any(k.startswith("clip_projection.") or k.startswith("unet.") for k in cleaned_state.keys())
     if has_wrapper_keys:
-        missing, unexpected = model.load_state_dict(cleaned_state, strict=False)
+        missing, unexpected = model.load_state_dict(cleaned_state, strict=True)
     else:
         missing, unexpected = model.unet.load_state_dict(cleaned_state, strict=False)
 
@@ -115,6 +117,8 @@ def load_models_mrclip(args, device, logger, mrclip_ckpt_path: str):
         logger.warning(f"  Unexpected keys: {len(unexpected)}")
 
     scale_factor = ckpt.get("scale_factor", torch.tensor(1.0))
+    if hasattr(scale_factor, "as_tensor"):
+        scale_factor = scale_factor.as_tensor()
     logger.info(f"scale_factor = {scale_factor}")
 
     return autoencoder, model, scale_factor
@@ -174,8 +178,24 @@ def run_inference_mrclip(
     with torch.amp.autocast("cuda", enabled=True):
         for t, next_t in tqdm(zip(all_t, all_next_t),
                                total=len(all_t), desc="Denoising"):
-            if cfg_scale > 0:
-                # Double-batch: [cond, uncond]
+            if cfg_scale == 0.0:
+                # Pure unconditional generation (no text conditioning)
+                model_output = model(
+                    x=image,
+                    timesteps=torch.tensor([t], device=device),
+                    clip_embedding=null_emb,
+                    spacing_tensor=spacing_tensor,
+                )
+            elif cfg_scale == 1.0:
+                # Standard conditional generation (single-pass)
+                model_output = model(
+                    x=image,
+                    timesteps=torch.tensor([t], device=device),
+                    clip_embedding=cond_emb,
+                    spacing_tensor=spacing_tensor,
+                )
+            else:
+                # Double-batch: [cond, uncond] -> uncond + s * (cond - uncond)
                 x2 = torch.cat([image, image], dim=0)
                 t2 = torch.tensor([t, t], device=device)
                 emb2 = torch.cat([cond_emb, null_emb], dim=0)
@@ -187,13 +207,6 @@ def run_inference_mrclip(
                 )
                 model_cond, model_uncond = out2.chunk(2)
                 model_output = model_uncond + cfg_scale * (model_cond - model_uncond)
-            else:
-                model_output = model(
-                    x=image,
-                    timesteps=torch.tensor([t], device=device),
-                    clip_embedding=cond_emb,
-                    spacing_tensor=spacing_tensor,
-                )
 
             if isinstance(noise_scheduler, RFlowScheduler):
                 image, _ = noise_scheduler.step(model_output, t, image, next_t)
@@ -225,8 +238,8 @@ def diff_model_infer_mrclip(
     model_config_path: str,
     model_def_path: str,
     mrclip_ckpt: str,
-    open_clip_src: str,
-    clip_checkpoint: str,
+    open_clip_src: str | None = None,
+    clip_checkpoint: str | None = None,
     metadata_text: str | None = None,
     csv_path: str | None = None,
     csv_idx: int | None = None,
@@ -235,6 +248,7 @@ def diff_model_infer_mrclip(
     context_length: int = 98,
     random_seed: int | None = None,
     num_gpus: int = 1,
+    sequence_label: str | None = None,
 ) -> str:
     args = load_config(env_config_path, model_config_path, model_def_path)
     local_rank, world_size, device = initialize_distributed(num_gpus)
@@ -244,8 +258,22 @@ def diff_model_infer_mrclip(
     set_determinism(seed)
     logger.info(f"Random seed: {seed}")
 
-    # Resolve metadata text
-    if metadata_text is None:
+    # Structured and sequence checkpoints carry their training preprocessing.
+    checkpoint_info = torch.load(mrclip_ckpt, map_location="cpu", weights_only=False)
+    conditioning = checkpoint_info.get("conditioning", "mrclip")
+    metadata_schema = checkpoint_info.get("metadata_schema")
+    sequence_schema = checkpoint_info.get("sequence_schema")
+    del checkpoint_info
+
+    if conditioning == "sequence":
+        if sequence_label is None and csv_path and csv_idx is not None:
+            import pandas as pd
+            sequence_label = pd.read_csv(csv_path).iloc[csv_idx]["sequence"]
+        if sequence_label is None:
+            raise ValueError("Sequence inference requires --sequence-label, or --csv/--csv-idx with a 'sequence' column")
+    elif sequence_label is not None:
+        raise ValueError("--sequence-label is only used by sequence-conditioned checkpoints")
+    elif metadata_text is None:
         if csv_path and csv_idx is not None:
             import pandas as pd
             df = pd.read_csv(csv_path)
@@ -254,12 +282,27 @@ def diff_model_infer_mrclip(
         else:
             raise ValueError("Provide either --metadata-text or both --csv and --csv-idx")
 
-    # Load CLIP text encoder
-    logger.info("Loading MR-CLIP text encoder...")
-    clip_model, tokenizer = load_clip_text_encoder(
-        open_clip_src, clip_checkpoint, context_length, device
-    )
-    clip_emb = embed_text(metadata_text, clip_model, tokenizer, device)  # (1, 512)
+    if conditioning == "sequence":
+        if sequence_schema is None:
+            raise ValueError("Sequence checkpoint is missing sequence_schema")
+        encoder = SequenceLabelEncoder(sequence_schema)
+        clip_emb = torch.from_numpy(encoder.transform([sequence_label])).to(device)
+        logger.info(f"High-level sequence label: {sequence_label}")
+    elif conditioning == "mlp":
+        if metadata_schema is None:
+            raise ValueError("MLP checkpoint is missing metadata_schema")
+        encoder = MetadataEncoder(metadata_schema)
+        clip_emb = torch.from_numpy(encoder.transform([metadata_text])).to(device)
+    elif conditioning == "mrclip":
+        if not open_clip_src or not clip_checkpoint:
+            raise ValueError("MR-CLIP inference requires --open-clip-src and --clip-checkpoint")
+        logger.info("Loading MR-CLIP text encoder...")
+        clip_model, tokenizer = load_clip_text_encoder(
+            open_clip_src, clip_checkpoint, context_length, device
+        )
+        clip_emb = embed_text(metadata_text, clip_model, tokenizer, device)
+    else:
+        raise ValueError(f"Unknown checkpoint conditioning: {conditioning}")
     logger.info(f"Encoded embedding: {clip_emb.shape}, norm={clip_emb.norm().item():.3f}")
 
     # Load diffusion model
@@ -268,6 +311,8 @@ def diff_model_infer_mrclip(
     output_size = tuple(args.diffusion_unet_inference["dim"])
     out_spacing = tuple(args.diffusion_unet_inference["spacing"])
 
+    # Encoder/model initialization differs between arms. Match sampling noise.
+    set_determinism(seed)
     data = run_inference_mrclip(
         args, device, autoencoder, model, scale_factor,
         clip_emb, output_size, cfg_scale, logger,
@@ -277,7 +322,7 @@ def diff_model_infer_mrclip(
     os.makedirs(output_dir, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d%H%M%S")
     out_path = (
-        f"{output_dir}/mrclip_seed{seed}"
+        f"{output_dir}/{conditioning}_seed{seed}"
         f"_size{'x'.join(str(d) for d in output_size)}"
         f"_cfg{cfg_scale}_{ts}.nii.gz"
     )
@@ -294,12 +339,14 @@ if __name__ == "__main__":
     p.add_argument("-t", "--model-def", required=True)
     p.add_argument("--mrclip-ckpt", required=True,
                    help="Path to fine-tuned MRCLIPConditionedUNet checkpoint")
-    p.add_argument("--open-clip-src", required=True,
+    p.add_argument("--open-clip-src", default=None,
                    help="Path to open_clip src directory")
-    p.add_argument("--clip-checkpoint", required=True,
+    p.add_argument("--clip-checkpoint", default=None,
                    help="Path to MR-CLIP epoch_latest.pt")
     p.add_argument("--metadata-text", type=str, default=None,
                    help="Free-text metadata string describing the desired MRI contrast")
+    p.add_argument("--sequence-label", default=None,
+                   help="Coarse label for sequence checkpoints: T1W, T2W, FLAIR, PDW, T2STARW")
     p.add_argument("--csv", type=str, default=None,
                    help="CSV path to pull text from by index")
     p.add_argument("--csv-idx", type=int, default=None,
@@ -327,4 +374,5 @@ if __name__ == "__main__":
         random_seed=a.seed,
         context_length=a.context_length,
         num_gpus=a.num_gpus,
+        sequence_label=a.sequence_label,
     )

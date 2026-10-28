@@ -1,0 +1,128 @@
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 0
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-bb9e7d73d500d9506f1a6466fbb3d8/ses-20131211164020/anat/ur_sub-bb9e7d73d500d9506f1a6466fbb3d8_ses-20131211164020_run-4_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.10184, 5.9, NONE, 90)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 1
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-bb9e7d73d500d9506f1a6466fbb3d8/ses-20131211164020/anat/ur_sub-bb9e7d73d500d9506f1a6466fbb3d8_ses-20131211164020_run-4_PDw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.020368, 5.9, NONE, 90)
+
+[T2STARW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 2
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-8dcf9bbc37f4cd5278d3010d1f8296/ses-20170621102001/anat/ur_sub-8dcf9bbc37f4cd5278d3010d1f8296_ses-20170621102001_run-6_T2starw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (resolve_4scan_trace_tra_128_p2_TRACEW, RM, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.061, 7.19, NONE, 180)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 3
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-8dcf9bbc37f4cd5278d3010d1f8296/ses-20170621102001/anat/ur_sub-8dcf9bbc37f4cd5278d3010d1f8296_ses-20170621102001_run-8_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_tra_384_p2, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.087, 3.96, NONE, 150)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 4
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-f4f30514bd44be950eb9100127a593/ses-20190311173347/anat/ur_sub-f4f30514bd44be950eb9100127a593_ses-20190311173347_run-3_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (AXIAL PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.11336, 4.52, NONE, 90)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 5
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-f4f30514bd44be950eb9100127a593/ses-20190311173347/anat/ur_sub-f4f30514bd44be950eb9100127a593_ses-20190311173347_run-3_PDw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (AXIAL PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.022672, 4.52, NONE, 90)
+
+[T1W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 6
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-10514f618630009705170e134c5d72/ses-20160911150343/anat/ur_sub-10514f618630009705170e134c5d72_ses-20160911150343_run-14_T1w_stripped.nii
+  Prompt: A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t1_se_sag_320, SE, SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.0089, 0.45, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 7
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-10514f618630009705170e134c5d72/ses-20160911150343/anat/ur_sub-10514f618630009705170e134c5d72_ses-20160911150343_run-15_T2w_stripped.nii
+  Prompt: A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (Siemens, Aera, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_sag_384, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.087, 4.7, NONE, 150)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 8
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-5_rec-B0_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (DWI ep2d_diff_orth, EP_SE_EP, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.111, 4.4, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 9
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-8_rec-B0_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (DWI ep2d_diff_orth, EP_SE_EP, SK_SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.111, 4.4, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 10
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-2_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.098, 3.25, NONE, 150)
+
+[T2STARW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 11
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-b3e18fc2f38ef59afdfff82e28cbc2/ses-20140514154406/anat/ur_sub-b3e18fc2f38ef59afdfff82e28cbc2_ses-20140514154406_run-3_T2starw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Symphony, 1.5), Acquisition (Description, Sequence, Variant): (t2_fl2d_tra_hemo, GR, SP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.026, 0.453, NONE, 20)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 12
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ec20a4c25c87bab6f702c0fb4d6576/ses-20150709132847/anat/ur_sub-ec20a4c25c87bab6f702c0fb4d6576_ses-20150709132847_run-3_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.102, 5.2, NONE, 90)
+
+[FLAIR] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 13
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-ec20a4c25c87bab6f702c0fb4d6576/ses-20150709132847/anat/ur_sub-ec20a4c25c87bab6f702c0fb4d6576_ses-20150709132847_run-5_FLAIR_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.12926, 8.002, 2, 90)
+
+[FLAIR] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 14
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-3d77f03840cf04bdb6fa3af218258d/ses-20150708115138/anat/ur_sub-3d77f03840cf04bdb6fa3af218258d_ses-20150708115138_run-5_FLAIR_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (T2 FLAIR propeller, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.119671, 10, 2.5, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 15
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-3d77f03840cf04bdb6fa3af218258d/ses-20150708115138/anat/ur_sub-3d77f03840cf04bdb6fa3af218258d_ses-20150708115138_run-3_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (T2 propeller, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.0895725, 5, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 16
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0d00eec2a4d7191e5f407b3ad6d52d/ses-20121205173935/anat/ur_sub-0d00eec2a4d7191e5f407b3ad6d52d_ses-20121205173935_run-4_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1064, 5.74, NONE, 90)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 17
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-0d00eec2a4d7191e5f407b3ad6d52d/ses-20121205173935/anat/ur_sub-0d00eec2a4d7191e5f407b3ad6d52d_ses-20121205173935_run-4_PDw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02128, 5.74, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 18
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-e9033dd4d07a8df2ea7f57ca86003f/ses-20150126154143/anat/ur_sub-e9033dd4d07a8df2ea7f57ca86003f_ses-20150126154143_run-2_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.086, 3.68, NONE, 150)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 19
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-e9033dd4d07a8df2ea7f57ca86003f/ses-20150126154143/anat/ur_sub-e9033dd4d07a8df2ea7f57ca86003f_ses-20150126154143_run-2_PDw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.014, 3.68, NONE, 150)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 20
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-a96a41545db7f70dd8ee9dd59e8b87/ses-20181016154603/anat/ur_sub-a96a41545db7f70dd8ee9dd59e8b87_ses-20181016154603_run-8_T2w_stripped.nii
+  Prompt: A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Sag T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.115808, 3.56, NONE, 90)
+
+[T1W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 21
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-a96a41545db7f70dd8ee9dd59e8b87/ses-20181016154603/anat/ur_sub-a96a41545db7f70dd8ee9dd59e8b87_ses-20181016154603_run-10_T1w_stripped.nii
+  Prompt: A brain MRI, plane sagittal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Sag T1 SE, SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.009, 0.38, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 22
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-427d1dcf34881892ef5f5aa443af1a/ses-20180205163044/anat/ur_sub-427d1dcf34881892ef5f5aa443af1a_ses-20180205163044_run-6_T2w_stripped.nii
+  Prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (CORONAL T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.08352, 8.44, NONE, 90)
+
+[FLAIR] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 23
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-427d1dcf34881892ef5f5aa443af1a/ses-20180205163044/anat/ur_sub-427d1dcf34881892ef5f5aa443af1a_ses-20180205163044_run-7_FLAIR_stripped.nii
+  Prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (CORONAL FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.132048, 8.002, 2, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 24
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-eb122c97f1229a7b947da1e87ec823/ses-20120223101657/anat/ur_sub-eb122c97f1229a7b947da1e87ec823_ses-20120223101657_run-5_T2w_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (T2-weighted trace, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1156, 6.02, NONE, 90)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 25
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-eb122c97f1229a7b947da1e87ec823/ses-20120223101657/anat/ur_sub-eb122c97f1229a7b947da1e87ec823_ses-20120223101657_run-5_PDw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (T2-weighted trace, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.02312, 6.02, NONE, 90)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 26
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-d036561e59c36bc9aea076803bc09f/ses-20120329190053/anat/ur_sub-d036561e59c36bc9aea076803bc09f_ses-20120329190053_run-6_T2w_stripped.nii
+  Prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Cor T2 FSE 3mm HiRes, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.122976, 5.4, NONE, 90)
+
+[FLAIR] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 27
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-d036561e59c36bc9aea076803bc09f/ses-20120329190053/anat/ur_sub-d036561e59c36bc9aea076803bc09f_ses-20120329190053_run-7_FLAIR_stripped.nii
+  Prompt: A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, SIGNA_HDx, 1.5), Acquisition (Description, Sequence, Variant): (Cor T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.1294, 8.002, 2, 90)
+
+[FLAIR] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 28
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-062664f6e8380a87de426f96d3de72/ses-20140519155043/anat/ur_sub-062664f6e8380a87de426f96d3de72_ses-20140519155043_run-3_FLAIR_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t2_tirm_tra_dark-fl_pat2, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.114, 9, 2.5, 150)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_test_unseen_OASIS_desktop.csv Row 29
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-062664f6e8380a87de426f96d3de72/ses-20140519155043/anat/ur_sub-062664f6e8380a87de426f96d3de72_ses-20140519155043_run-2_PDw_stripped.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.014, 3.99, NONE, 150)
+
+[T2W] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_train_unseen_OASIS.csv Row 17
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-80086a7a83ab95d49552a46887ae50/ses-20141222085323/anat/ur_sub-80086a7a83ab95d49552a46887ae50_ses-20141222085323_run-6_T2w.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (DWI ep2d_diff_orth_ADC, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.10224, 5.68, NONE, 90)
+
+[PDW] CSV: mr_all_3D_final_et_20_rt_20_simplified_anatomical_cleaned_with_pair_ids_orientation_val_unseen_OASIS.csv Row 1
+  Real path: /data/mr_niftis/nfs/home/mavci/MR/midi/rawdata/sub-6725971993a89ead792094d760e8c5/ses-20161025130124/anat/ur_sub-6725971993a89ead792094d760e8c5_ses-20161025130124_run-4_PDw.nii
+  Prompt: A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.019888, 5.4, NONE, 90)
+

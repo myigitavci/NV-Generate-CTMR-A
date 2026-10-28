@@ -1,0 +1,40 @@
+=== Avanto | T2W (count=207) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.086, 3.68, NONE, 150)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.086, 3.99, NONE, 150)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (pd+t2_tse_tra, SE, SK_SP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.083, 3.55, NONE, 150)
+
+=== Avanto | FLAIR (count=67) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t2_tirm_tra_dark-fl_pat2, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.114, 9, 2.5, 150)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t2_tirm_tra_dark-fl_pat2, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.114, 9, 2.5, 150)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (Siemens, Avanto, 1.5), Acquisition (Description, Sequence, Variant): (t2_tirm_tra_dark-fl_pat2, SE_IR, SK_SP_MP_OSP), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.11, 8, 2.3, 150)
+
+=== DISCOVERY_MR750 | T2W (count=36) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FRFSE, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.065136, 4.38, NONE, 111)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FRFSE 2mm, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.064848, 4.38, NONE, 111)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FRFSE, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.065232, 4.38, NONE, 111)
+
+=== DISCOVERY_MR750 | FLAIR (count=72) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.128644, 8, 2, 111)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.128412, 8, 2, 111)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR750, 3), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR 4mm, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.128412, 8, 2, 111)
+
+=== Signa_HDxt | T2W (count=330) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.10184, 5.9, NONE, 90)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (AXIAL PD/T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.11336, 4.52, NONE, 90)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.102, 5.2, NONE, 90)
+
+=== Signa_HDxt | FLAIR (count=198) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.12926, 8.002, 2, 90)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (T2 FLAIR propeller, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.119671, 10, 2.5, 90)
+  [2] A brain MRI, plane coronal, Scanner (Manufacturer, Model, Field Strength): (GE, Signa_HDxt, 1.5), Acquisition (Description, Sequence, Variant): (CORONAL FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.132048, 8.002, 2, 90)
+
+=== DISCOVERY_MR450 | T2W (count=99) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 PROPELLER, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.133616, 3.6, NONE, 160.145)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 PROPELLER, SE, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.144, 3, NONE, 160.145)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Average DC, EP_SE, NONE), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.0881, 6, NONE, 90)
+
+=== DISCOVERY_MR450 | FLAIR (count=85) ===
+  [0] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.124308, 8, 2, 90)
+  [1] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.125388, 7.1, 2, 160)
+  [2] A brain MRI, plane axial, Scanner (Manufacturer, Model, Field Strength): (GE, DISCOVERY_MR450, 1.5), Acquisition (Description, Sequence, Variant): (Ax T2 FLAIR, SE_IR, SK), Imaging Parameters (Echo Time, Repetition Time, Inversion Time, Flip Angle): (0.123228, 7.5, 2, 160)
+
