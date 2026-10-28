@@ -30,6 +30,37 @@ def normalize_sequence_label(value: str) -> str:
     return label
 
 
+def sequence_labels_from_store(data: dict) -> tuple[list[str], str]:
+    """Support older embedding PKLs without using metadata to guess contrast.
+
+    Filename fallback uses only the explicit terminal contrast suffix, never
+    scanner names, acquisition descriptions, timing values, or numeric IDs.
+    """
+    count = len(data["embeddings"])
+    labels = data.get("sequences")
+    if labels is not None and len(labels) > 0:
+        if len(labels) != count:
+            raise ValueError(f"PKL 'sequences' has {len(labels)} rows but embeddings has {count}; "
+                             "refusing potentially misaligned labels")
+        return [normalize_sequence_label(label) for label in labels], "sequences"
+    paths = data.get("filepaths")
+    if paths is None or len(paths) != count:
+        keys = ", ".join(sorted(data.keys()))
+        raise ValueError(f"Sequence conditioning needs aligned 'sequences' or 'filepaths' in the PKL. "
+                         f"Expected {count} rows; available keys: {keys}. "
+                         "Regenerate the PKL with scripts.embed_with_mrclip or restore its aligned scan paths.")
+    resolved = []
+    for idx, path in enumerate(paths):
+        filename = str(path).rsplit("/", 1)[-1]
+        match = re.search(r"(?:^|_)(T1w|T2w|FLAIR|PDw|T2starw)(?:_stripped)?(?:_emb)?\.nii(?:\.gz)?$",
+                          filename, flags=re.IGNORECASE)
+        if match is None:
+            raise ValueError(f"Cannot extract an explicit coarse contrast suffix from PKL filepaths[{idx}]: "
+                             f"{path!r}. Supply aligned 'sequences'; no labels are inferred from TE/TR.")
+        resolved.append(normalize_sequence_label(match.group(1)))
+    return resolved, "filepaths_suffix"
+
+
 class SequenceLabelEncoder:
     """Training-only class vocabulary with one-hot inputs to the shared MLP."""
 

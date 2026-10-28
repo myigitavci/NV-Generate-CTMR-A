@@ -12,7 +12,9 @@ import numpy as np
 import torch
 from monai.apps.generation.maisi.networks.diffusion_model_unet_maisi import DiffusionModelUNetMaisi
 
-from scripts.metadata_conditioning import MetadataEncoder, SequenceLabelEncoder, parse_metadata, NUMERICAL
+from scripts.metadata_conditioning import (
+    MetadataEncoder, SequenceLabelEncoder, parse_metadata, NUMERICAL, sequence_labels_from_store,
+)
 from scripts.mrclip_conditioned_unet import MRCLIPConditionedUNet
 from scripts.diff_model_train_mrclip import (
     EmbeddingStore, load_filenames_and_indices, load_wrapped_unet, save_checkpoint_mrclip,
@@ -36,6 +38,32 @@ def tiny_unet():
 
 
 class MetadataTests(unittest.TestCase):
+    def test_legacy_pkl_filename_fallback(self):
+        paths = ["/data/sub-1_run-1_T1w_stripped.nii", "/data/sub-2_T2w_stripped_emb.nii.gz",
+                 "/data/sub-3_FLAIR.nii.gz", "/data/sub-4_PDw_stripped.nii.gz",
+                 "/data/sub-5_T2starw.nii"]
+        data = {"embeddings": np.zeros((5, 512)), "sequences": [], "filepaths": paths}
+        labels, source = sequence_labels_from_store(data)
+        self.assertEqual(labels, ["T1W", "T2W", "FLAIR", "PDW", "T2STARW"])
+        self.assertEqual(source, "filepaths_suffix")
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "legacy.pkl"
+            with path.open("wb") as f:
+                pickle.dump(data, f)
+            store = EmbeddingStore(str(path), "sequence", list(range(5)))
+            self.assertEqual(store.sequence_label_source, "filepaths_suffix")
+            self.assertEqual(store.embeddings.shape, (5, 5))
+        data["sequences"] = ["T2W"]  # Nonempty partial metadata is unsafe.
+        with self.assertRaisesRegex(ValueError, "misaligned"):
+            sequence_labels_from_store(data)
+        data.pop("sequences")
+        data["filepaths"][0] = "/data/T1w/sub-1_unknown.nii.gz"
+        with self.assertRaisesRegex(ValueError, "explicit coarse contrast suffix"):
+            sequence_labels_from_store(data)
+        data.pop("filepaths")
+        with self.assertRaisesRegex(ValueError, "available keys"):
+            sequence_labels_from_store(data)
+
     def test_sequence_only_store_excludes_all_detailed_metadata(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "features.pkl"

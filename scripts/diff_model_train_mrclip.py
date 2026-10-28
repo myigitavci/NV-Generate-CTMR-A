@@ -54,7 +54,7 @@ from torch.nn.parallel import DistributedDataParallel
 
 from .diff_model_setting import initialize_distributed, load_config, setup_logging
 from .mrclip_conditioned_unet import MRCLIPConditionedUNet
-from .metadata_conditioning import MetadataEncoder, SequenceLabelEncoder
+from .metadata_conditioning import MetadataEncoder, SequenceLabelEncoder, sequence_labels_from_store
 from .utils import define_instance
 
 
@@ -79,6 +79,7 @@ class EmbeddingStore:
             raise ValueError("Dataset contains out-of-range conditioning indices")
         self.metadata_schema = None
         self.sequence_schema = None
+        self.sequence_label_source = None
         if conditioning == "mlp":
             texts = data.get("texts")
             if texts is None or len(texts) != len(data["embeddings"]):
@@ -88,9 +89,8 @@ class EmbeddingStore:
             self.embeddings = encoder.transform(texts)
             self.metadata_schema = encoder.schema
         elif conditioning == "sequence":
-            labels = data.get("sequences")
-            if labels is None or len(labels) != len(data["embeddings"]):
-                raise ValueError("Sequence conditioning requires one coarse label per row in PKL 'sequences'")
+            labels, self.sequence_label_source = sequence_labels_from_store(data)
+            print(f"[EmbeddingStore] Sequence labels from {self.sequence_label_source}", flush=True)
             encoder = (SequenceLabelEncoder(sequence_schema) if sequence_schema is not None
                        else SequenceLabelEncoder.fit([labels[i] for i in train_indices or []]))
             self.embeddings = encoder.transform(labels)
@@ -665,6 +665,7 @@ def diff_model_train_mrclip(
         "conditioning_dim": emb_store.embeddings.shape[1],
         "metadata_schema": emb_store.metadata_schema,
         "sequence_schema": emb_store.sequence_schema,
+        "sequence_label_source": emb_store.sequence_label_source,
         "training_config": {
             "seed": seed, "phase": phase, "initial_checkpoint": initial_ckpt,
             "data_json": data_json, "training_split_sha256": data_digest,

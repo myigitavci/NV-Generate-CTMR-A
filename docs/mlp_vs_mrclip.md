@@ -6,14 +6,18 @@ No VAE re-encoding or new CSV is needed. The MLP arm uses the `texts` in the
 existing PKL, aligned by the same `idx` as MR-CLIP. It does not use the PKL's
 MR-CLIP embedding values.
 
-The `sequence` arm takes **only the coarse string labels from PKL `sequences`**:
+The `sequence` arm takes **only coarse contrast labels**, normally from PKL `sequences`:
 T1W, T2W, FLAIR, PDW, and T2STARW. It never reads the PKL numeric `labels`
 (which are finer protocol categories), metadata texts, or MR-CLIP features as
 conditioning. A one-hot label vector goes through the same two-layer adapter
 and time-embedding injection point as the other arms. Its training-only class
 vocabulary is saved as `sequence_schema` and restored in phase 2 and inference.
 Unknown, missing, or unsupported labels raise an error rather than silently
-falling back to another class. Existing spacing/body geometry inputs are shared
+falling back to another class. For older PKLs without a populated `sequences`
+list, it reads the explicit contrast suffix from the aligned `filepaths` list
+(for example `_T2w_stripped.nii.gz`). It validates every suffix and logs the
+source as `filepaths_suffix`; it never guesses contrast from TE/TR. Nonempty,
+misaligned `sequences` arrays are rejected. Existing spacing/body geometry inputs are shared
 across all arms; "sequence only" refers to acquisition/contrast conditioning.
 
 ## Conditioning
@@ -79,6 +83,17 @@ Override the default project root or container image using
 job names, checkpoint directories, and logs. Reusing the same arm/phase/seed
 targets the same outputs, so use a different seed or project root for an
 independent rerun.
+
+To resubmit a failed job without colliding with its existing RunAI name:
+
+```bash
+ABLATION_JOB_NAME=nvgenerate-sequence-p1-s42-r1 \
+  bash scripts/submit_conditioning_ablation.sh sequence 1 42 100
+```
+
+This changes the job name only; the checkpoint/log directories remain the same.
+The launcher sets `MPLCONFIGDIR` to a writable temporary directory inside the
+container to avoid the `/.config/matplotlib` permission warning.
 
 ## Outputs and reproducibility
 

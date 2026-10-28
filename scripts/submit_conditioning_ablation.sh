@@ -29,12 +29,12 @@ else
 fi
 
 command=(
-    runai training standard submit "nvgenerate-${conditioning}-p${phase}-s${seed}"
+    runai training standard submit "${ABLATION_JOB_NAME:-nvgenerate-${conditioning}-p${phase}-s${seed}}"
     --image "$image" --image-pull-policy Always
     --gpu-devices-request 1 --large-shm --backoff-limit 0 --host-ipc --run-as-user
     --node-type A100 --host-path path=/nfs,mount=/nfs,readwrite
     --cpu-core-request 16 --cpu-memory-request 32G
-    --command -- bash -c 'cd "$1" && shift && exec python -m scripts.diff_model_train_mrclip "$@"'
+    --command -- bash -c 'export MPLCONFIGDIR="$(mktemp -d /tmp/nvgenerate-mpl.XXXXXX)" && cd "$1" && shift && exec python -m scripts.diff_model_train_mrclip "$@"'
     bash "$project"
     -e "$project/configs/environment_dgx_diff_model_rflow-mr-brain.json"
     -c "$project/configs/config_maisi_diff_model_rflow-mr-brain.json"
